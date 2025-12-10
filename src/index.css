@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+button {
+  cursor: pointer;
+}
+
+.scrollHidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollBar::-webkit-scrollbar {
+  height: 2px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
