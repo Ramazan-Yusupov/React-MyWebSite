@@ -26,11 +26,7 @@ export const sliderData: SliderGroup[] = [
   {
     id: 2,
     title: "Backend",
-    list: [
-      { id: 1, value: 10, label: "i18n", delay: 0.1 },
-      { id: 2, value: 13, label: "Prisma", delay: 0.15 },
-      { id: 3, value: 32, label: "Zustand", delay: 0.2 },
-    ],
+    list: [{ id: 2, value: 13, label: "Prisma", delay: 0.15 }],
   },
   {
     id: 3,
@@ -50,6 +46,8 @@ export const sliderData: SliderGroup[] = [
       { id: 2, value: 46, label: "GitLab", delay: 0.15 },
       { id: 3, value: 26, label: "Vercel", delay: 0.2 },
       { id: 4, value: 26, label: "Netlify", delay: 0.25 },
+      { id: 5, value: 10, label: "i18n", delay: 0.1 },
+      { id: 6, value: 32, label: "Zustand", delay: 0.2 },
     ],
   },
 ];
