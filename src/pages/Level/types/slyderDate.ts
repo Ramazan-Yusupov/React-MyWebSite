@@ -14,7 +14,7 @@ export interface SliderGroup {
 export const sliderData: SliderGroup[] = [
   {
     id: 1,
-    title: "JS/TS",
+    title: "Frontend",
     list: [
       { id: 1, value: 84, label: "Next.js/React.js", delay: 0.1 },
       { id: 2, value: 15, label: "React-Query(TanStack-Query)", delay: 0.15 },
