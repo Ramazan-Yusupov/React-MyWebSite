@@ -14,6 +14,13 @@ body {
   font-family: Mooli, sans-serif;
 }
 
+.grid-template-columns {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
 @theme {
   /* Custom theme colors */
   --color-black: #000000;

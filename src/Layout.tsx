@@ -4,7 +4,7 @@ interface Props {
 
 export function Layout({ children }: Props) {
   return (
-    <div className="py-8 mx-auto">
+    <div className="py-8 mx-auto px-10">
       <main className="">{children}</main>
     </div>
   );
