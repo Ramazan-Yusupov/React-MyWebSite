@@ -15,6 +15,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icons": "^5.5.0",
+    "react-router-dom": "^7.13.0",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.0"
   },
@@ -30,9 +31,6 @@
     "globals": "^16.5.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.56.0",
-    "vite": "^8.0.0-beta.15"
-  },
-  "overrides": {
-    "vite": "^8.0.0-beta.13"
+    "vite": "^7.3.1"
   }
 }
