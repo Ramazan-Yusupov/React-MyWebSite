@@ -1,21 +1,13 @@
 @import "tailwindcss";
 
-button {
-  cursor: pointer;
+:root {
+  --background-black: #000000;
+  --color-white: #ffffff;
+  --color-white-100: #f8fafc;
+  --linear-gradient: linear-gradient(rgba(209, 213, 219, 0.8), rgb(0, 0, 0));
 }
-
-.scrollHidden::-webkit-scrollbar {
-  display: none;
-}
-.scrollBar::-webkit-scrollbar {
-  height: 2px;
-}
-
-.scrollBar::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 2px;
-}
-
-.scrollBar::-webkit-scrollbar-thumb:hover {
-  background: #555;
+body {
+  background: var(--background-black);
+  color: var(--color-white-100);
+  font-family: Mooli, sans-serif;
 }
