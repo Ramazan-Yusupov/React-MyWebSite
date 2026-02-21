@@ -1,9 +1,8 @@
-import { CardStack } from "../../features/Cards/CardStack";
-
+import { CardGallery } from "@/features/Cards/CardGallery";
 export function Home() {
   return (
     <div className="">
-      <CardStack />
+      <CardGallery />
     </div>
   );
 }
