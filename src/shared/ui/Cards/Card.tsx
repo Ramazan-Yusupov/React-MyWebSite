@@ -5,6 +5,7 @@ interface CardProps {
   text?: string;
   href?: string;
   title?: string;
+  header?: boolean;
   maxWidth?: number;
   linkTitle?: string;
   classname?: string;
@@ -16,6 +17,7 @@ export function Card({
   href,
   text,
   title,
+  header,
   maxWidth,
   children,
   iconText,
@@ -24,18 +26,20 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`bg-slate rounded-xl pt-5  w-full ${classname || ""}`}
+      className={`bg-slate rounded-xl w-full ${classname || ""}`}
       style={{
         maxWidth: maxWidth,
       }}
     >
-      <div className="flex flex-col gap-0.5 items-center">
-        <div className="flex items-start gap-1">
-          {iconText}
-          <p className="text-grey">{text}</p>
+      {header && (
+        <div className="flex flex-col gap-0.5 items-center pt-5">
+          <div className="flex items-start gap-1">
+            <span className="text-icon text-xl">{iconText}</span>
+            <p className="text-grey">{text}</p>
+          </div>
+          <div className="text-xl">{title}</div>
         </div>
-        <div className="text-xl">{title}</div>
-      </div>
+      )}
       <div>{children}</div>
       <div className="flex justify-center items-center">
         {linkTitle && (

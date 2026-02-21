@@ -6,12 +6,13 @@ import { galleryItems } from "@/mockApi/galleryItems";
 export function CardGallery() {
   return (
     <Card
+      header
       href="/"
       maxWidth={450}
       text="Projects"
       title="Works Gallery"
       linkTitle="View Works"
-      iconText={<MdWork className="text-icon" size={20} />}
+      iconText={<MdWork />}
     >
       <Marquee>
         {galleryItems.map((item) => (

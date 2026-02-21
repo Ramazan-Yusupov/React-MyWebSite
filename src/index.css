@@ -28,6 +28,7 @@ body {
   --color-slate: #101010;
   --color-slate-100: #191919;
   --color-slate-200: #1f1f1f;
+  --color-slate-300: #141414;
 
   --color-white: #ffffff;
   --color-white-100: #f8fafc;
@@ -38,8 +39,10 @@ body {
   --color-grey-100: #282828;
   --color-grey-200: #838383;
 
+  --color-indigo: #6c60a4;
+
   --color-icon: #a291fd;
   --color-icon-100: #999999;
 
-  --linear-gradient: linear-gradient(rgba(209, 213, 219, 0.8), rgb(0, 0, 0));
+  --color-stroke: #1e293b;
 }
