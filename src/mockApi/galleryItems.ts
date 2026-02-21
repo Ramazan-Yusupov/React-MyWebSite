@@ -1,4 +1,4 @@
-export const items = [
+export const galleryItems = [
   {
     id: 1,
     image: "/31SaaS.png",

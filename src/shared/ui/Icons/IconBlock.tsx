@@ -13,7 +13,7 @@ export function IconBlock({ icon, height = "xl" }: IconProps) {
   };
   return (
     <div
-      className={`bg-grey-100 rounded-xl flex justify-center items-center text-icon-100 ${heightMap[height]}`}
+      className={`bg-grey-100 rounded-xl flex justify-center items-center text-icon-100 shrink-0 ${heightMap[height]}`}
     >
       <div>{icon}</div>
     </div>
