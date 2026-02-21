@@ -8,7 +8,7 @@ interface CardProps {
   header?: boolean;
   maxWidth?: number;
   linkTitle?: string;
-  classname?: string;
+  className?: string;
   iconText?: React.ReactNode;
   children: React.ReactNode;
 }
@@ -21,12 +21,12 @@ export function Card({
   maxWidth,
   children,
   iconText,
-  classname,
+  className,
   linkTitle,
 }: CardProps) {
   return (
     <div
-      className={`bg-slate rounded-xl w-full ${classname || ""}`}
+      className={`bg-slate rounded-xl w-full shrink-0 ${className || ""}`}
       style={{
         maxWidth: maxWidth,
       }}

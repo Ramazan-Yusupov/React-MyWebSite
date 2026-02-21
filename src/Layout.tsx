@@ -4,8 +4,8 @@ interface Props {
 
 export function Layout({ children }: Props) {
   return (
-    <div className="py-8 mx-auto px-10">
-      <main className="">{children}</main>
+    <div className="py-8 mx-auto px-10 flex justify-center">
+      <main>{children}</main>
     </div>
   );
 }

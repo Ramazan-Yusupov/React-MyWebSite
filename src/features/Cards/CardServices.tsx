@@ -9,7 +9,6 @@ export function CardServices() {
     <Card
       header
       href="/"
-      maxWidth={450}
       text="Services"
       title="Solutions Suite"
       linkTitle="View All Services"

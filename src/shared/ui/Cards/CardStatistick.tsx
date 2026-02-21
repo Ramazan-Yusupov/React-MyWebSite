@@ -9,7 +9,7 @@ interface CardStatProps {
 
 export function CardStatistick({ num, text, icon }: CardStatProps) {
   return (
-    <Card maxWidth={193} classname="pb-5.5 px-2.5">
+    <Card maxWidth={193} className="pb-5.5 px-2.5">
       <div className="text-[64px] flex items-center justify-center">
         <p className="bg-linear-to-b from-gray-300/90 to-black bg-clip-text text-transparent">
           {num}

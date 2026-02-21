@@ -9,10 +9,9 @@ export function CardStack() {
   return (
     <Card
       header
-      maxWidth={450}
       text="My Stacks"
       title="Tech Arsenal"
-      classname="pb-10 px-8"
+      className="pb-10 px-8"
       iconText={<SiStackbit />}
     >
       <div className="grid grid-cols-2 gap-2 pt-2">

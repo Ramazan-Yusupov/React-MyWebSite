@@ -8,7 +8,6 @@ export function CardGallery() {
     <Card
       header
       href="/"
-      maxWidth={450}
       text="Projects"
       title="Works Gallery"
       linkTitle="View Works"
