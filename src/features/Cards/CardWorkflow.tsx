@@ -1,48 +1,28 @@
-import { SiStackbit, SiTypescript } from "react-icons/si";
+import { SiStackbit } from "react-icons/si";
 import { Card } from "../../shared/ui/Cards/Card";
 import { CardLink } from "../../shared/ui/Cards/CardLink";
-import { TbBrandNextjs } from "react-icons/tb";
-import { FaReact } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io";
+import { frameworkItems } from "@/mockApi/frameworkItem";
 
 export function CardWorkflow() {
   return (
     <Card
       header
-      text="My Stacks"
-      title="Tech Arsenal"
-      className="pb-7 md:px-8 px-4"
+      text="My Frameworks"
+      title="Frameworks"
+      className="pb-4 md:px-5 px-4"
       iconText={<SiStackbit />}
     >
-      <div className="flex flex-col gap-2 pt-2 overflow-y-scroll max-h-70 scrollHidden">
-        <CardLink
-          height="md"
-          target="_blank"
-          title="Next.js"
-          href="https://nextjs.org/"
-          icon={<TbBrandNextjs size={24} />}
-        />
-        <CardLink
-          height="md"
-          target="_blank"
-          title="React.js"
-          href="https://react.dev/"
-          icon={<FaReact size={24} />}
-        />
-        <CardLink
-          height="md"
-          target="_blank"
-          title="JavaScript"
-          href="https://www.javascript.com/"
-          icon={<IoLogoJavascript size={24} />}
-        />
-        <CardLink
-          height="md"
-          target="_blank"
-          title="TypeScript"
-          href="https://www.typescriptlang.org/"
-          icon={<SiTypescript size={24} />}
-        />
+      <div className="flex flex-col gap-2 mt-2 overflow-y-scroll max-h-70 max-[1700px]:max-h-78 scrollHidden">
+        {frameworkItems.map((item) => (
+          <CardLink
+            key={item.id}
+            height="md"
+            target="_blank"
+            title={item.title}
+            href={item.href}
+            icon={item.icon}
+          />
+        ))}
       </div>
     </Card>
   );

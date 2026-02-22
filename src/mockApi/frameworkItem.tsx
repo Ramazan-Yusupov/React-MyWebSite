@@ -1,42 +1,75 @@
-export const servicesItems = [
+import { FaJsSquare } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import {
+  TbBrandNextjs,
+  TbBrandReact,
+  TbBrandRedux,
+  TbBrandTypescript,
+} from "react-icons/tb";
+import { BsFiletypeScss } from "react-icons/bs";
+import { IoLogoCss3 } from "react-icons/io5";
+import { FaHtml5 } from "react-icons/fa6";
+
+interface FrameProps {
+  id: number;
+  icon: React.ReactNode;
+  title: string;
+  href: string;
+}
+
+export const frameworkItems: FrameProps[] = [
   {
     id: 1,
-    icon: "1",
-    title: "Mobile App Design",
+    icon: <TbBrandNextjs size={24} />,
+    title: "Next.js",
+    href: "https://nextjs.org/",
   },
   {
     id: 2,
-    icon: "2",
-    title: "Web Development",
+    icon: <TbBrandReact size={24} />,
+    title: "React.js",
+    href: "https://react.dev/",
   },
   {
     id: 3,
-    icon: "3",
-    title: "Framer Development",
+    icon: <TbBrandRedux size={24} />,
+    title: "Redux, RTK, RTK-Query",
+    href: "https://redux.js.org/",
   },
   {
     id: 4,
-    icon: "4",
-    title: "Web Design",
+    icon: <TbBrandTypescript size={24} />,
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org/",
   },
   {
     id: 5,
-    icon: "5",
-    title: "Seo Optimization",
+    icon: <FaJsSquare size={24} />,
+    title: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     id: 6,
-    icon: "6",
-    title: "Webflow Development",
+    icon: <RiTailwindCssFill size={24} />,
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com/",
   },
   {
     id: 7,
-    icon: "7",
-    title: "Frontend",
+    icon: <BsFiletypeScss size={24} />,
+    title: "SCSS",
+    href: "https://sass-lang.com/",
   },
   {
     id: 8,
-    icon: "8",
-    title: "Backend",
+    icon: <IoLogoCss3 size={24} />,
+    title: "css",
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    id: 9,
+    icon: <FaHtml5 size={24} />,
+    title: "HTML",
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
 ];
