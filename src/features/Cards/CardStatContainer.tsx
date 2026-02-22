@@ -1,12 +1,12 @@
 import { CardStatistick } from "@/shared/ui/Cards/CardStatistick";
 import { FaFlag } from "react-icons/fa6";
+import { GoProjectRoadmap } from "react-icons/go";
 
 export function CardStatContainer() {
   return (
-    <div className="flex gap-5">
-      <CardStatistick text="Projects" num={56} icon={<FaFlag />} />
-      <CardStatistick text="Happy Clients" num={23} icon={<FaFlag />} />
-      <CardStatistick text="Year Expertise" num={6} icon={<FaFlag />} />
+    <div className="flex flex-col gap-5">
+      <CardStatistick text="Проекты" num={6} icon={<GoProjectRoadmap />} />
+      <CardStatistick text="Года опыта" num={3} icon={<FaFlag />} />
     </div>
   );
 }

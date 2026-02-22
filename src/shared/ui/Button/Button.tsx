@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 interface ButtonProps {
-  title: string;
   href?: string;
+  title: string;
+  target?: string;
   icon?: React.ReactNode;
 }
 
-export function Button({ title, icon, href }: ButtonProps) {
+export function Button({ title, icon, href, target }: ButtonProps) {
   return href ? (
     <Link
       to={href}
+      target={target}
       className="flex gap-3 items-center justify-center bg-slate-100 h-12 w-full rounded-lg"
     >
       <span className="text-icon text-2xl">{icon}</span>

@@ -5,35 +5,39 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 
-export function CardStack() {
+export function CardWorkflow() {
   return (
     <Card
       header
       text="My Stacks"
       title="Tech Arsenal"
-      className="pb-7 px-8"
+      className="pb-7 px-5"
       iconText={<SiStackbit />}
     >
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-2">
+      <div className="flex flex-col gap-2 pt-2 overflow-y-scroll max-h-70 scrollHidden">
         <CardLink
+          height="md"
           target="_blank"
           title="Next.js"
           href="https://nextjs.org/"
           icon={<TbBrandNextjs size={24} />}
         />
         <CardLink
+          height="md"
           target="_blank"
           title="React.js"
           href="https://react.dev/"
           icon={<FaReact size={24} />}
         />
         <CardLink
+          height="md"
           target="_blank"
           title="JavaScript"
           href="https://www.javascript.com/"
           icon={<IoLogoJavascript size={24} />}
         />
         <CardLink
+          height="md"
           target="_blank"
           title="TypeScript"
           href="https://www.typescriptlang.org/"

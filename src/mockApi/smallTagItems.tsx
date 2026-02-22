@@ -1,37 +1,31 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { RiCodeBoxFill, RiGlobalFill } from "react-icons/ri";
-import { FaClock } from "react-icons/fa";
-import { FaBook } from "react-icons/fa6";
+import { BiSolidCity } from "react-icons/bi";
 
 export const smallTagItems = [
   {
     id: 1,
-    icon: <FaMapMarkerAlt />,
-    title: "Kayakent",
+    icon: <BiSolidCity />,
+    title: "AVBInvest",
   },
   {
     id: 2,
-    icon: <RiGlobalFill />,
-    title: "English & Russian",
+    icon: <FaMapMarkerAlt />,
+    title: "Каякент",
   },
   {
     id: 3,
+    icon: <RiGlobalFill />,
+    title: "Английский & Русский",
+  },
+  {
+    id: 4,
     icon: <RiCodeBoxFill />,
     title: "Frontend Developer",
   },
   {
-    id: 4,
-    icon: <FaMapMarkerAlt />,
-    title: "Backend Developer",
-  },
-  {
     id: 5,
-    icon: <FaClock />,
-    title: "IST",
-  },
-  {
-    id: 6,
-    icon: <FaBook />,
-    title: "MIT University",
+    icon: <RiCodeBoxFill />,
+    title: "Backend Developer",
   },
 ];

@@ -11,14 +11,14 @@ button {
 body {
   background: var(--color-black);
   color: var(--color-white-100);
-  font-family: Mooli, sans-serif;
+  font-family: Mooli, Montserrat, sans-serif;
 }
 
 .grid-template-columns {
   width: 100%;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 @theme {
