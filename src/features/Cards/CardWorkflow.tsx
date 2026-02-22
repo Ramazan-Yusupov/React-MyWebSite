@@ -11,7 +11,7 @@ export function CardWorkflow() {
       header
       text="My Stacks"
       title="Tech Arsenal"
-      className="pb-7 px-5"
+      className="pb-7 md:px-8 px-4"
       iconText={<SiStackbit />}
     >
       <div className="flex flex-col gap-2 pt-2 overflow-y-scroll max-h-70 scrollHidden">

@@ -10,7 +10,7 @@ export function CardFollow() {
       header
       text="Follow Me"
       title="Social Media"
-      className="pb-7 px-8"
+      className="pb-7 md:px-8 px-4"
       iconText={<IoShareSocial />}
     >
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-2.5">

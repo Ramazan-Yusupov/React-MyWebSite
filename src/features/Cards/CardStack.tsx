@@ -11,7 +11,7 @@ export function CardStack() {
       header
       text="My Stacks"
       title="Tech Arsenal"
-      className="pb-7 px-8"
+      className="pb-7 md:px-8 px-4"
       iconText={<SiStackbit />}
     >
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-2">
