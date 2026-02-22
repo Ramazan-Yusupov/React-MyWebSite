@@ -1,42 +1,56 @@
-export const servicesItems = [
+import { FaPager } from "react-icons/fa6";
+import { IoAppsSharp } from "react-icons/io5";
+import { MdDesignServices, MdWebAsset } from "react-icons/md";
+import { DiResponsive } from "react-icons/di";
+import { RiPagesFill } from "react-icons/ri";
+import { PiBrowsersDuotone } from "react-icons/pi";
+import { TbApi } from "react-icons/tb";
+
+interface ServicesProps {
+  id: number;
+  title: string;
+  icon: React.ReactNode;
+}
+
+export const servicesItems: ServicesProps[] = [
   {
     id: 1,
-    icon: "1",
-    title: "Mobile App Design",
+    icon: <MdWebAsset size={25} />,
+    title: "Разработка сайтов",
   },
   {
     id: 2,
-    icon: "2",
-    title: "Web Development",
+    icon: <FaPager size={25} />,
+    title: "Создание лендингов",
   },
   {
     id: 3,
-    icon: "3",
-    title: "Framer Development",
+    icon: <IoAppsSharp size={25} />,
+    title: "Веб-приложения",
   },
   {
     id: 4,
-    icon: "4",
-    title: "Web Design",
+    icon: <MdDesignServices size={25} />,
+    title: "Вёрстка из Figma",
   },
   {
     id: 5,
-    icon: "5",
-    title: "Seo Optimization",
+    icon: <DiResponsive size={35} />,
+    title: "Адаптивная вёрстка",
   },
   {
     id: 6,
-    icon: "6",
-    title: "Webflow Development",
+    icon: <RiPagesFill size={25} />,
+    title: "Одностраничные приложения",
   },
   {
     id: 7,
-    icon: "7",
-    title: "Frontend",
+    icon: <PiBrowsersDuotone size={25} />,
+    title: "Кроссбраузерность",
   },
   {
     id: 8,
-    icon: "8",
-    title: "Backend",
+    icon: <TbApi size={25} />,
+    title: "Интеграция API",
   },
 ];
