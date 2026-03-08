@@ -26,12 +26,6 @@ export interface ServicesProps {
   icon: React.ReactNode;
 }
 
-export interface SmallTagItemsProps {
-  id: number;
-  title: string;
-  icon: React.ReactNode;
-}
-
 export interface ButtonProps {
   href?: string;
   title: string;
@@ -90,7 +84,9 @@ export interface BigTagProps {
   icon?: React.ReactNode;
 }
 export interface SmallTagProps {
-  text: string;
+  id?: number;
+  href: string;
+  title: string;
+  icon: React.ReactNode;
   className?: string;
-  icon?: React.ReactNode;
 }

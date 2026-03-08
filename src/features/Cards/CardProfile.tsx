@@ -42,22 +42,27 @@ export function CardProfile() {
         <Card className="bg-slate-300 py-5 px-4.5">
           <div className="flex flex-wrap max-md:justify-center gap-4 gap-y-2">
             {smallTagItems.map((item) => (
-              <SmallTag key={item.id} text={item.title} icon={item.icon} />
+              <SmallTag
+                key={item.id}
+                icon={item.icon}
+                href={item.href}
+                title={item.title}
+              />
             ))}
           </div>
         </Card>
         <div className="flex max-sm:flex-col gap-3">
           <Button
-            href={CONTACT_LINKS.telegram.href}
             target="_blank"
-            title={CONTACT_LINKS.telegram.title}
             icon={<FaTelegramPlane />}
+            href={CONTACT_LINKS.telegram.href}
+            title={CONTACT_LINKS.telegram.title}
           />
           <Button
-            href={CONTACT_LINKS.whatsapp.href}
             target="_blank"
-            title={CONTACT_LINKS.whatsapp.title}
             icon={<IoLogoWhatsapp />}
+            href={CONTACT_LINKS.whatsapp.href}
+            title={CONTACT_LINKS.whatsapp.title}
           />
         </div>
       </div>
