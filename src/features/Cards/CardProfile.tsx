@@ -12,17 +12,23 @@ export function CardProfile() {
     <Card>
       <div className="flex flex-col gap-3 py-7.5 px-5 relative">
         <div className="flex max-md:flex-col max-md:items-center gap-3 max-md:mt-10">
-          <img src={PROFILE.avatarSrc} alt={PROFILE.name} className="w-32.5 rounded-xl" />
-          <div className="flex flex-col max-md:items-center max-md:gap-3 justify-between">
+          <img
+            src={PROFILE.avatarSrc}
+            alt={PROFILE.name}
+            className="w-32.5 rounded-xl"
+          />
+          <div className="flex flex-col max-md:items-center max-md:gap-3 gap-4">
             <BigTag
               className="w-50"
               text={PROFILE.status}
               icon={<GoDotFill color="#0f0" />}
             />
-            <div className="sm:text-3xl text-2xl whitespace-nowrap truncate">
-              {PROFILE.name}
+            <div className="max-md:text-center">
+              <div className="sm:text-3xl text-2xl whitespace-nowrap truncate">
+                {PROFILE.name}
+              </div>
+              <div className="text-icon">{PROFILE.role}</div>
             </div>
-            <div className="text-icon">{PROFILE.role}</div>
           </div>
         </div>
         <Link
