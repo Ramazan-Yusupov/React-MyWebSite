@@ -1,4 +1,6 @@
-export const projectItems = [
+import type { ProjectItem } from "@/types";
+
+export const projectItems: ProjectItem[] = [
   {
     id: 1,
     title: "WRUniversal",

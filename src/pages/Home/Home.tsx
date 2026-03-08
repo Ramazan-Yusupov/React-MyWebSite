@@ -1,10 +1,13 @@
-import { CardFollow } from "@/features/Cards/CardFollow";
-import { CardProfile } from "@/features/Cards/CardProfile";
-import { CardProjects } from "@/features/Cards/CardProjects";
-import { CardServices } from "@/features/Cards/CardServices";
-import { CardStack } from "@/features/Cards/CardStack";
-import { CardStatContainer } from "@/features/Cards/CardStatContainer";
-import { CardWorkflow } from "@/features/Cards/CardWorkflow";
+import {
+  CardFollow,
+  CardProfile,
+  CardProjects,
+  CardServices,
+  CardStack,
+  CardStatContainer,
+  CardWorkflow,
+} from "@/features";
+
 export function Home() {
   return (
     <>

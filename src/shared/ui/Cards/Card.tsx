@@ -1,17 +1,6 @@
+import type { CardProps } from "@/types";
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
-interface CardProps {
-  text?: string;
-  href?: string;
-  title?: string;
-  header?: boolean;
-  maxWidth?: number;
-  linkTitle?: string;
-  className?: string;
-  iconText?: React.ReactNode;
-  children: React.ReactNode;
-}
 
 export function Card({
   href,

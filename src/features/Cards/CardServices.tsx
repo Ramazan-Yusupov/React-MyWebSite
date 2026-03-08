@@ -1,17 +1,17 @@
 import Marquee from "react-fast-marquee";
-import { Card } from "@/shared/ui/Cards/Card";
-import { CardLink } from "@/shared/ui/Cards/CardLink";
-import { servicesItems } from "@/mockApi/ServicesItems";
 import { IoGrid } from "react-icons/io5";
+import { CARDS_CONTENT } from "@/config";
+import { servicesItems } from "@/mockApi";
+import { Card, CardLink } from "@/shared";
 
 export function CardServices() {
   return (
     <Card
       header
       href="/"
-      text="Services"
-      title="Solutions Suite"
-      linkTitle="View All Services"
+      text={CARDS_CONTENT.services.text}
+      title={CARDS_CONTENT.services.title}
+      linkTitle={CARDS_CONTENT.services.linkTitle}
       iconText={<IoGrid />}
     >
       <Marquee

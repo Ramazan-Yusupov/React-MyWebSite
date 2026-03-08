@@ -1,14 +1,14 @@
 import { SiStackbit } from "react-icons/si";
-import { Card } from "../../shared/ui/Cards/Card";
-import { CardLink } from "../../shared/ui/Cards/CardLink";
-import { frameworkItems } from "@/mockApi/frameworkItem";
+import { CARDS_CONTENT } from "@/config";
+import { frameworkItems } from "@/mockApi";
+import { Card, CardLink } from "@/shared";
 
 export function CardWorkflow() {
   return (
     <Card
       header
-      text="My Frameworks"
-      title="Frameworks"
+      text={CARDS_CONTENT.workflow.text}
+      title={CARDS_CONTENT.workflow.title}
       className="pb-4 md:px-5 px-4"
       iconText={<SiStackbit />}
     >

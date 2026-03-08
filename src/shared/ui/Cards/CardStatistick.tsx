@@ -1,11 +1,6 @@
-import { Card } from "@/shared/ui/Cards/Card";
-import { BigTag } from "@/shared/ui/Tags/BigTag";
-
-interface CardStatProps {
-  num: number;
-  text: string;
-  icon: React.ReactNode;
-}
+import type { CardStatProps } from "@/types";
+import { BigTag } from "../Tags/BigTag";
+import { Card } from "./Card";
 
 export function CardStatistick({ num, text, icon }: CardStatProps) {
   return (

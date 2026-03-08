@@ -1,10 +1,6 @@
-interface TagProps {
-  text: string;
-  className?: string;
-  icon?: React.ReactNode;
-}
+import type { BigTagProps } from "@/types";
 
-export function BigTag({ icon, text, className }: TagProps) {
+export function BigTag({ icon, text, className }: BigTagProps) {
   return (
     <div
       className={`flex justify-center items-center gap-2 px-5 bg-slate-300 h-9.5 rounded-xl border border-stroke ${className || ""}`}

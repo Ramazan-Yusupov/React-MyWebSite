@@ -1,15 +1,14 @@
-import { CardProject } from "@/shared/ui/Cards/CardProject";
-import { Card } from "../../shared/ui/Cards/Card";
-
 import { GoProjectRoadmap } from "react-icons/go";
-import { projectItems } from "@/mockApi/projectItems";
+import { CARDS_CONTENT } from "@/config";
+import { projectItems } from "@/mockApi";
+import { Card, CardProject } from "@/shared";
 
 export function CardProjects() {
   return (
     <Card
       header
-      text="My Works"
-      title="Проекты"
+      text={CARDS_CONTENT.projects.text}
+      title={CARDS_CONTENT.projects.title}
       className="pb-7 px-5 flex flex-col justify-center items-center"
       iconText={<GoProjectRoadmap />}
     >

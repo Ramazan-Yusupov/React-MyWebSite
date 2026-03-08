@@ -5,12 +5,7 @@ import { DiResponsive } from "react-icons/di";
 import { RiPagesFill } from "react-icons/ri";
 import { PiBrowsersDuotone } from "react-icons/pi";
 import { TbApi } from "react-icons/tb";
-
-interface ServicesProps {
-  id: number;
-  title: string;
-  icon: React.ReactNode;
-}
+import type { ServicesProps } from "@/types";
 
 export const servicesItems: ServicesProps[] = [
   {

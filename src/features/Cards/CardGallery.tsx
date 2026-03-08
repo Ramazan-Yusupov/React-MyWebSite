@@ -1,16 +1,17 @@
 import { MdWork } from "react-icons/md";
 import Marquee from "react-fast-marquee";
-import { Card } from "@/shared/ui/Cards/Card";
-import { galleryItems } from "@/mockApi/galleryItems";
+import { CARDS_CONTENT } from "@/config";
+import { galleryItems } from "@/mockApi";
+import { Card } from "@/shared";
 
 export function CardGallery() {
   return (
     <Card
       header
       href="/"
-      text="Projects"
-      title="Works Gallery"
-      linkTitle="View Works"
+      text={CARDS_CONTENT.gallery.text}
+      title={CARDS_CONTENT.gallery.title}
+      linkTitle={CARDS_CONTENT.gallery.linkTitle}
       iconText={<MdWork />}
     >
       <Marquee>

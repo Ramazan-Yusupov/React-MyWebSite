@@ -1,4 +1,6 @@
-export const galleryItems = [
+import type { GalleryItem } from "@/types";
+
+export const galleryItems: GalleryItem[] = [
   {
     id: 1,
     image: "/31SaaS.png",

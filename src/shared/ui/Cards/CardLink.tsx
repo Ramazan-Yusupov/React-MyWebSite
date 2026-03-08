@@ -1,19 +1,7 @@
 import { Link } from "react-router-dom";
-import { IconBlock } from "../Icons/IconBlock";
 import { FaArrowRightLong } from "react-icons/fa6";
-
-type Height = "xl" | "md" | "sm";
-
-interface CardLinkProps {
-  tag?: string;
-  href?: string;
-  title: string;
-  target?: string;
-  className?: string;
-  height?: Height;
-  icon: React.ReactNode;
-  iconArrowRight?: React.ReactNode;
-}
+import { IconBlock } from "../Icons/IconBlock";
+import type { CardLinkProps } from "@/types";
 
 export function CardLink({
   tag,
@@ -45,6 +33,16 @@ export function CardLink({
       )}
     </>
   );
+
+  const isExternalLink = href?.startsWith("http");
+
+  if (href && isExternalLink) {
+    return (
+      <a href={href} target={target} rel={target === "_blank" ? "noreferrer" : undefined} className={baseClasses}>
+        {Content}
+      </a>
+    );
+  }
 
   return href ? (
     <Link to={href} target={target} className={baseClasses}>

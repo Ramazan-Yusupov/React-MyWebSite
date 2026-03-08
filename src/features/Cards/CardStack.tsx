@@ -1,16 +1,16 @@
 import { SiI18Next } from "react-icons/si";
-import { Card } from "../../shared/ui/Cards/Card";
-import { CardLink } from "../../shared/ui/Cards/CardLink";
 import { FaGithub, FaGitlab } from "react-icons/fa6";
 import { FiFigma } from "react-icons/fi";
 import { RiToolsLine } from "react-icons/ri";
+import { CARDS_CONTENT } from "@/config";
+import { Card, CardLink } from "@/shared";
 
 export function CardStack() {
   return (
     <Card
       header
-      text="My Favorite Tools"
-      title="Tools"
+      text={CARDS_CONTENT.stack.text}
+      title={CARDS_CONTENT.stack.title}
       className="pb-7 md:px-5 px-4"
       iconText={<RiToolsLine />}
     >

@@ -1,9 +1,4 @@
-type Height = "xl" | "md" | "sm";
-
-interface IconProps {
-  height: Height;
-  icon: React.ReactNode;
-}
+import type { IconProps } from "@/types";
 
 export function IconBlock({ icon, height = "xl" }: IconProps) {
   const heightMap = {

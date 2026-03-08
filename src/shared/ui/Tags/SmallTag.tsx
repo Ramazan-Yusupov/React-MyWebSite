@@ -1,10 +1,6 @@
-interface TagProps {
-  text: string;
-  className?: string;
-  icon?: React.ReactNode;
-}
+import type { SmallTagProps } from "@/types";
 
-export function SmallTag({ icon, text, className }: TagProps) {
+export function SmallTag({ icon, text, className }: SmallTagProps) {
   return (
     <div
       className={`inline-flex items-center gap-1 ps-2 pe-4 bg-slate-100 h-7 rounded-full ${className || ""}`}

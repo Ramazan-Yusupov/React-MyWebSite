@@ -9,13 +9,7 @@ import {
 import { BsFiletypeScss } from "react-icons/bs";
 import { IoLogoCss3 } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa6";
-
-interface FrameProps {
-  id: number;
-  icon: React.ReactNode;
-  title: string;
-  href: string;
-}
+import type { FrameProps } from "@/types";
 
 export const frameworkItems: FrameProps[] = [
   {

@@ -1,4 +1,4 @@
-import { CardStatistick } from "@/shared/ui/Cards/CardStatistick";
+import { CardStatistick } from "@/shared";
 import { FaFlag } from "react-icons/fa6";
 import { GoProjectRoadmap } from "react-icons/go";
 

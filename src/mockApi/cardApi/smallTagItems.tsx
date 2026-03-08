@@ -1,8 +1,9 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { RiCodeBoxFill, RiGlobalFill } from "react-icons/ri";
 import { BiSolidCity } from "react-icons/bi";
+import type { SmallTagItemsProps } from "@/types";
 
-export const smallTagItems = [
+export const smallTagItems: SmallTagItemsProps[] = [
   {
     id: 1,
     icon: <BiSolidCity />,

@@ -1,38 +1,35 @@
-import { Card } from "../../shared/ui/Cards/Card";
-import { CardLink } from "../../shared/ui/Cards/CardLink";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
+import { CARDS_CONTENT, SOCIAL_LINKS } from "@/config";
+import { Card, CardLink } from "@/shared";
 
 export function CardFollow() {
+  const socialIcons = {
+    telegram: <FaTelegramPlane size={24} />,
+    github: <FaGithub size={24} />,
+    linkedin: <FaLinkedin size={24} />,
+  } as const;
+
   return (
     <Card
       header
-      text="Follow Me"
-      title="Social Media"
+      text={CARDS_CONTENT.follow.text}
+      title={CARDS_CONTENT.follow.title}
       className="pb-7 md:px-5 px-4"
       iconText={<IoShareSocial />}
     >
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-2.5">
-        <CardLink
-          target="_blank"
-          title="@frontend747"
-          href="https://web.telegram.org/k/#@frontend747"
-          icon={<FaTelegramPlane size={24} />}
-        />
-        <CardLink
-          target="_blank"
-          title="GitHub"
-          href="https://github.com/Ramazan-Yusupov"
-          icon={<FaGithub size={24} />}
-        />
-        <CardLink
-          target="_blank"
-          title="Linkedin"
-          className="sm:col-span-2"
-          href="https://www.linkedin.com/in/ramazan747/"
-          icon={<FaLinkedin size={24} />}
-        />
+        {SOCIAL_LINKS.map((item) => (
+          <CardLink
+            key={item.id}
+            target="_blank"
+            title={item.title}
+            href={item.href}
+            className={item.className}
+            icon={socialIcons[item.id]}
+          />
+        ))}
       </div>
     </Card>
   );
