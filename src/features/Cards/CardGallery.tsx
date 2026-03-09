@@ -20,7 +20,7 @@ export function CardGallery() {
             alt="image"
             key={item.id}
             src={item.image}
-            className="w-50 h-27.5 rounded-2xl mx-1 object-cover mt-4"
+            className="mx-1 mt-4 h-27.5 w-50 rounded-2xl object-cover"
           />
         ))}
       </Marquee>

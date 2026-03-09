@@ -9,10 +9,10 @@ export function CardProjects() {
       header
       text={CARDS_CONTENT.projects.text}
       title={CARDS_CONTENT.projects.title}
-      className="pb-7 px-5 flex flex-col justify-center items-center"
+      className="flex flex-col items-center justify-center px-5 pb-7"
       iconText={<GoProjectRoadmap />}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-scroll h-79 scrollHidden mt-2">
+      <div className="scrollHidden mt-2 grid h-79 grid-cols-1 gap-4 overflow-y-scroll md:grid-cols-2">
         {projectItems.map((project) => (
           <CardProject
             key={project.id}

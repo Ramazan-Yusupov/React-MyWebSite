@@ -20,7 +20,7 @@ export function CardServices() {
         gradientColor="#101010"
         gradientWidth={100}
       >
-        <div className="flex gap-2 px-1 mt-4">
+        <div className="mt-4 flex gap-2 px-1">
           {servicesItems.map((item) => (
             <CardLink
               height="md"
@@ -32,7 +32,7 @@ export function CardServices() {
         </div>
       </Marquee>
       <Marquee gradient={true} gradientColor="#101010" gradientWidth={100}>
-        <div className="flex gap-2 mt-4 px-1">
+        <div className="mt-4 flex gap-2 px-1">
           {servicesItems.map((item) => (
             <CardLink
               height="md"

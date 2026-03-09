@@ -1,3 +1,4 @@
+import { cn } from "@/lib";
 import type { IconProps } from "@/types";
 
 export function IconBlock({ icon, height = "xl" }: IconProps) {
@@ -8,7 +9,10 @@ export function IconBlock({ icon, height = "xl" }: IconProps) {
   };
   return (
     <div
-      className={`bg-grey-100 rounded-xl flex justify-center items-center text-icon-100 shrink-0 ${heightMap[height]}`}
+      className={cn(
+        "bg-grey-100 text-icon-100 flex shrink-0 items-center justify-center rounded-xl",
+        heightMap[height],
+      )}
     >
       <div>{icon}</div>
     </div>

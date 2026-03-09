@@ -16,9 +16,14 @@ export function Button({
 
   if (href && isExternalLink) {
     return (
-      <a href={href} target={target} rel={target === "_blank" ? "noreferrer" : undefined} className={classes}>
+      <a
+        href={href}
+        target={target}
+        rel={target === "_blank" ? "noreferrer" : undefined}
+        className={classes}
+      >
         <span className="text-icon text-2xl">{icon}</span>
-        <p className="text-white-200 text-[18px]">{title}</p>
+        <p className="text-white-200 text-md">{title}</p>
       </a>
     );
   }
@@ -27,15 +32,20 @@ export function Button({
     return (
       <Link to={href} target={target} className={classes}>
         <span className="text-icon text-2xl">{icon}</span>
-        <p className="text-white-200 text-[18px]">{title}</p>
+        <p className="text-white-200 text-md">{title}</p>
       </Link>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={classes}
+    >
       <span className="text-icon text-2xl">{icon}</span>
-      <p className="text-white-200 text-[18px]">{title}</p>
+      <p className="text-white-200 text-md">{title}</p>
     </button>
   );
 }

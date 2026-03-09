@@ -17,19 +17,19 @@ export function CardLink({
 
   const Content = (
     <>
-      <div className="flex items-center gap-2 min-w-0">
+      <div className="flex min-w-0 items-center gap-2">
         <IconBlock icon={icon} height={height} />
-        <div className="text-base text-white-200 whitespace-nowrap truncate">
+        <div className="text-white-200 truncate text-base whitespace-nowrap">
           {title}
         </div>
       </div>
       {tag && (
-        <div className="bg-slate-200 text-grey-200 py-1.5 px-2.5 rounded-xl shrink-0">
+        <div className="text-grey-200 shrink-0 rounded-xl bg-slate-200 px-2.5 py-1.5">
           {tag}
         </div>
       )}
       {iconArrowRight && (
-        <FaArrowRightLong size={29} className="text-grey shrink-0 me-3" />
+        <FaArrowRightLong size={29} className="text-grey me-3 shrink-0" />
       )}
     </>
   );
@@ -38,7 +38,12 @@ export function CardLink({
 
   if (href && isExternalLink) {
     return (
-      <a href={href} target={target} rel={target === "_blank" ? "noreferrer" : undefined} className={baseClasses}>
+      <a
+        href={href}
+        target={target}
+        rel={target === "_blank" ? "noreferrer" : undefined}
+        className={baseClasses}
+      >
         {Content}
       </a>
     );

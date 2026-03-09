@@ -16,10 +16,10 @@ export function CardFollow() {
       header
       text={CARDS_CONTENT.follow.text}
       title={CARDS_CONTENT.follow.title}
-      className="pb-7 md:px-5 px-4"
+      className="card-section-padding"
       iconText={<IoShareSocial />}
     >
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-2.5">
+      <div className="grid grid-cols-1 gap-2 pt-2.5 sm:grid-cols-2">
         {SOCIAL_LINKS.map((item) => (
           <CardLink
             key={item.id}

@@ -1,3 +1,4 @@
+import { cn } from "@/lib";
 import type { CardProps } from "@/types";
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -15,13 +16,13 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`bg-slate rounded-xl w-full shrink-0 ${className || ""}`}
+      className={cn("bg-slate w-full shrink-0 rounded-xl", className)}
       style={{
         maxWidth: maxWidth,
       }}
     >
       {header && (
-        <div className="flex flex-col gap-0.5 items-center pt-5">
+        <div className="flex flex-col items-center gap-0.5 pt-5">
           <div className="flex items-start gap-1">
             <span className="text-icon text-xl">{iconText}</span>
             <p className="text-grey">{text}</p>
@@ -30,7 +31,7 @@ export function Card({
         </div>
       )}
       <div>{children}</div>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         {linkTitle && (
           <Link
             to={href || "/"}

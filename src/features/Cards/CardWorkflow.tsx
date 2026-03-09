@@ -9,10 +9,10 @@ export function CardWorkflow() {
       header
       text={CARDS_CONTENT.workflow.text}
       title={CARDS_CONTENT.workflow.title}
-      className="pb-4 md:px-5 px-4"
+      className="px-4 pb-4 md:px-5"
       iconText={<SiStackbit />}
     >
-      <div className="flex flex-col gap-2 mt-2 overflow-y-scroll max-h-70 max-[1700px]:max-h-78 scrollHidden">
+      <div className="scrollHidden mt-2 flex max-h-70 flex-col gap-2 overflow-y-scroll max-2xl:max-h-78">
         {frameworkItems.map((item) => (
           <CardLink
             key={item.id}

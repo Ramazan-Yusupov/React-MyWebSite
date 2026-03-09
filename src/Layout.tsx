@@ -1,6 +1,6 @@
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="lg:py-8 py-4 lg:px-10 px-5 flex place-content-center">
+    <div className="flex place-content-center px-5 py-4 lg:px-10 lg:py-8">
       <main>{children}</main>
     </div>
   );
