@@ -9,13 +9,11 @@ const titleClasses = "font-bold text-lg";
 const descriptionClasses = "text-sm text-gray-500";
 
 export function CardProject({
+  id,
   title,
-  description,
   imageUrl,
-  projectUrl,
+  description,
 }: CardProjectProps) {
-  const isExternalLink = projectUrl.startsWith("http");
-
   const content = (
     <>
       <img src={imageUrl} alt={title} className={imageClasses} />
@@ -28,20 +26,9 @@ export function CardProject({
 
   return (
     <Card className="mt-4 bg-slate-100 p-3.5">
-      {isExternalLink ? (
-        <a
-          href={projectUrl}
-          target="_blank"
-          rel="noreferrer"
-          className={linkClasses}
-        >
-          {content}
-        </a>
-      ) : (
-        <Link to={projectUrl} className={linkClasses}>
-          {content}
-        </Link>
-      )}
+      <Link to={`/project/${id}`} className={linkClasses}>
+        {content}
+      </Link>
     </Card>
   );
 }

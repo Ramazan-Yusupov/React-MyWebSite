@@ -1,0 +1,26 @@
+import { StatCard } from "./StatCard";
+
+interface Stat {
+  label: string;
+  value: string;
+  color?: string;
+}
+
+interface ProjectStatsProps {
+  stats: Stat[];
+}
+
+export function ProjectStats({ stats }: ProjectStatsProps) {
+  return (
+    <div className="grid grid-cols-2 gap-4 rounded-lg bg-slate-100 p-4 md:grid-cols-4">
+      {stats.map((stat, index) => (
+        <StatCard
+          key={index}
+          label={stat.label}
+          value={stat.value}
+          color={stat.color}
+        />
+      ))}
+    </div>
+  );
+}

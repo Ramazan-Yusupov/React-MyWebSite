@@ -15,11 +15,11 @@ export function CardProjects() {
       <div className="scrollHidden mt-2 grid h-79 grid-cols-1 gap-4 overflow-y-scroll md:grid-cols-2">
         {projectItems.map((project) => (
           <CardProject
+            id={project.id}
             key={project.id}
             title={project.title}
             imageUrl={project.imageUrl}
             description={project.description}
-            projectUrl={project.projectUrl}
           />
         ))}
       </div>
