@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const VisitCounter = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { count, loading } = useVisitCounter("home");
+  const { count, loading, error } = useVisitCounter("home");
 
   useEffect(() => {
     // Проверяем, есть ли в URL параметр ?show_stats=true
@@ -32,13 +32,13 @@ export const VisitCounter = () => {
     );
   }
 
-  // if (error) {
-  //   return (
-  //     <div className="fixed right-4 bottom-4 z-50 rounded bg-red-900 px-3 py-1 text-xs text-white shadow-lg">
-  //       Stats Error
-  //     </div>
-  //   );
-  // }
+  if (error) {
+    return (
+      <div className="fixed right-4 bottom-4 z-50 rounded bg-red-900 px-3 py-1 text-xs text-white shadow-lg">
+        Stats Error
+      </div>
+    );
+  }
 
   return (
     <div className="fixed right-4 bottom-4 z-50 flex items-center gap-2 rounded-lg border border-blue-500/30 bg-blue-900/90 px-4 py-2 text-sm font-medium text-blue-100 shadow-xl backdrop-blur-sm">
