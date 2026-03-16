@@ -1,5 +1,5 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -7,81 +7,77 @@ const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 let supabaseClient: SupabaseClient | null = null;
 
 const getSupabaseClient = (): SupabaseClient | null => {
-  if (!supabaseUrl || !supabaseKey) {
-    return null;
-  }
-
+  if (!supabaseUrl || !supabaseKey) return null;
   if (!supabaseClient) {
     supabaseClient = createClient(supabaseUrl, supabaseKey);
   }
-
   return supabaseClient;
+};
+
+// Функция для генерации простого уникального ID
+const generateVisitorId = (): string => {
+  if (typeof window === "undefined") return "server-id";
+  let id = localStorage.getItem("site_visitor_id");
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("site_visitor_id", id);
+  }
+  return id;
 };
 
 export const useVisitCounter = (pageName: string = "home") => {
   const [count, setCount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const lastIncrementedPageRef = useRef<string | null>(null);
 
   useEffect(() => {
     let isMounted = true;
     const client = getSupabaseClient();
 
-    setLoading(true);
-    setError(null);
-
     if (!client) {
-      setError(
-        "Missing Supabase environment variables: VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY",
-      );
+      setError("Missing Supabase env variables");
       setLoading(false);
-      return () => {
-        isMounted = false;
-      };
+      return;
     }
 
-    // Avoid double increment in React 18 dev strict mode for the same page.
-    if (import.meta.env.DEV && lastIncrementedPageRef.current === pageName) {
-      setLoading(false);
-      return () => {
-        isMounted = false;
-      };
-    }
-
-    lastIncrementedPageRef.current = pageName;
-
-    const fetchAndIncrement = async (): Promise<void> => {
+    const initCounter = async () => {
       try {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        const { data, error: rpcError } = await client.rpc("increment_visit", {
+        const visitorId = generateVisitorId();
+
+        // 1. Регистрируем посетителя (игнорируем результат, так как БД сама защитит от дублей)
+        // Мы просто вызываем функцию, чтобы сработал триггер UNIQUE constraint
+        const { error: regError } = await client.rpc("REGISTER_VISITOR", {
           page: pageName,
+          visitor_id: visitorId,
         });
 
-        if (rpcError) {
-          throw rpcError;
-        }
+        if (regError) throw regError;
+
+        // 2. Получаем актуальное количество уникальных пользователей
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const { data: countData, error: countError } = await client.rpc(
+          "GET_UNIQUE_COUNT",
+          { page: pageName },
+        );
+
+        if (countError) throw countError;
 
         if (isMounted) {
-          setCount(typeof data === "number" ? data : 0);
+          setCount(Number(countData));
           setError(null);
         }
       } catch (err: unknown) {
-        const errorMessage =
-          err instanceof Error ? err.message : "Unknown error occurred";
-
+        const msg = err instanceof Error ? err.message : "Unknown error";
         if (isMounted) {
-          setError(errorMessage);
-          console.error("Error updating visit count:", err);
+          setError(msg);
+          console.error("Visit counter error:", err);
         }
       } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+        if (isMounted) setLoading(false);
       }
     };
 
-    void fetchAndIncrement();
+    void initCounter();
 
     return () => {
       isMounted = false;
