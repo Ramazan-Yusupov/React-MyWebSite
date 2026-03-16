@@ -6,6 +6,7 @@ export { CardStatistick } from "./ui/Cards/CardStatistick";
 export { SmallTag } from "./ui/Tags/SmallTag";
 export { BigTag } from "./ui/Tags/BigTag";
 export { IconBlock } from "./ui/Icons/IconBlock";
+export { VisitCounter } from "./ui/VisitCounter/VisitCounter";
 export { StatCard } from "./ui/ProjectUI/StatCard";
 export { SectionCard } from "./ui/Cards/SectionCard";
 export { ProjectNotFound } from "./ui/ProjectUI/ProjectNotFound";
