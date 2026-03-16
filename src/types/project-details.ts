@@ -1,5 +1,3 @@
-import type { FeatureIconKey } from "@/config/features-icons";
-
 export interface ProjectDetailsProps {
   projectId: string;
 }
@@ -29,7 +27,6 @@ export interface ProjectInfoProps {
 export interface FeatureItem {
   id?: string;
   text: string;
-  iconKey?: FeatureIconKey;
 }
 
 export interface ProjectStat {

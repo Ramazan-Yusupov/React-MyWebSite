@@ -16,26 +16,23 @@ export interface ProjectItem {
   id: string;
   title: string;
   description: string;
-  longDescription?: string; // Подробное описание для страницы деталей
   imageUrl: string;
-  gallery?: string[]; // Дополнительные скриншоты
   link: string;
   projectDetails: {
     tags: { icon: React.ReactNode; text: string; href: string }[];
-    features: string[];
-    challenges: string[];
-    lessonsLearned?: string[]; // Что изучил в процессе
+    features: {
+      text: string;
+      icon: React.ReactNode;
+    }[];
     github: string;
-    difficulty: "Junior" | "Middle" | "Senior"; // Уровень сложности
+    difficulty:
+      | "Пет Проект"
+      | "Управлял Проектом"
+      | "Junior"
+      | "Middle"
+      | "Senior"; // Уровень сложности
     duration: string; // "3 месяца", "2 недели" и т.д.
-    role: string; // "Full Stack", "Frontend", "UI/UX"
     status: "Completed" | "In Progress" | "Planning";
-    techStack?: string[]; // Для отображения в виде текста
-    metrics?: {
-      performance?: string; // "95 Lighthouse"
-      users?: string; // "10k+ users"
-      commits?: string; // "150+ commits"
-    };
   };
 }
 
@@ -74,7 +71,7 @@ export interface CardLinkProps {
   title: string;
   target?: React.HTMLAttributeAnchorTarget;
   className?: string;
-  height?: SizeVariant;
+  size?: SizeVariant;
   icon: React.ReactNode;
   iconArrowRight?: boolean;
 }
@@ -93,8 +90,9 @@ export interface CardStatProps {
 }
 
 export interface IconProps {
-  height?: SizeVariant;
+  size?: SizeVariant;
   icon: React.ReactNode;
+  className?: string;
 }
 
 export interface BigTagProps {

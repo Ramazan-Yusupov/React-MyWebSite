@@ -17,7 +17,7 @@ export function StatCard({
   return (
     <Card className="flex flex-col items-center justify-center px-4 py-5 text-center">
       {icon && <div className="mb-2 flex justify-center">{icon}</div>}
-      <p className={`text-2xl font-bold ${color} mb-1`}>{value}</p>
+      <p className={`text-xl font-bold xl:text-2xl ${color} mb-1`}>{value}</p>
       <p className="text-sm text-gray-600 dark:text-gray-400">{label}</p>
     </Card>
   );

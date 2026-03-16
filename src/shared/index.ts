@@ -13,6 +13,5 @@ export { ProjectHeader } from "./ui/ProjectUI/ProjectHeader";
 export { ProjectHero } from "./ui/ProjectUI/ProjectHero";
 export { ProjectInfo } from "./ui/ProjectUI/ProjectInfo";
 export { FeatureList } from "./ui/ProjectUI/FeatureList";
-export { ChallengesList } from "./ui/ProjectUI/ChallengesList";
 export { ProjectStats } from "./ui/ProjectUI/ProjectStats";
 export { ProjectActions } from "./ui/ProjectUI/ProjectActions";

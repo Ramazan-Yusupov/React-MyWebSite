@@ -3,6 +3,7 @@ export const PROFILE = {
   role: "Frontend Developer",
   status: "Ищу работу",
   avatarSrc: "/frontend.jpg",
-  resumeHref: "/",
+  resumeHref: "/Frontend(Next-React).pdf",
   resumeLabel: "Резюме",
+  resumeDownloadName: "Frontend(Next-React).pdf",
 } as const;

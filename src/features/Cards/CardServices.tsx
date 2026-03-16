@@ -8,11 +8,10 @@ export function CardServices() {
   return (
     <Card
       header
-      href="/"
+      iconText={<IoGrid />}
+      className="card-section-padding pb-10"
       text={CARDS_CONTENT.services.text}
       title={CARDS_CONTENT.services.title}
-      linkTitle={CARDS_CONTENT.services.linkTitle}
-      iconText={<IoGrid />}
     >
       <Marquee
         direction="right"
@@ -23,7 +22,7 @@ export function CardServices() {
         <div className="mt-4 flex gap-2 px-1">
           {servicesItems.map((item) => (
             <CardLink
-              height="md"
+              size="md"
               key={item.id}
               icon={item.icon}
               title={item.title}
@@ -35,7 +34,7 @@ export function CardServices() {
         <div className="mt-4 flex gap-2 px-1">
           {servicesItems.map((item) => (
             <CardLink
-              height="md"
+              size="md"
               key={item.id}
               icon={item.icon}
               title={item.title}

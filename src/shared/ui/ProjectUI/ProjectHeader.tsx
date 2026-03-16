@@ -17,7 +17,7 @@ export function ProjectHeader({ projectLink }: ProjectHeaderProps) {
         href={projectLink}
         target="_blank"
         rel="noreferrer"
-        className="bg-primary-600 hover:bg-primary-700 shadow-primary-600/20 hover:shadow-primary-600/30 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 font-medium text-white shadow-lg transition-all hover:-translate-y-0.5"
+        className="bg-primary-600 hover:bg-primary-700 shadow-primary-600/20 hover:shadow-primary-600/30 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 font-medium text-white shadow-lg transition-all hover:-translate-y-0.5 max-sm:hidden"
       >
         <ExternalLink className="h-4 w-4" />
         Visit project

@@ -8,7 +8,6 @@ import {
   ProjectHero,
   ProjectInfo,
   FeatureList,
-  ChallengesList,
   ProjectStats,
   ProjectActions,
 } from "@/shared";
@@ -33,11 +32,6 @@ export function ProjectDetails() {
       color: "text-blue-600",
     },
     {
-      label: "Role",
-      value: project.projectDetails.role,
-      color: "text-green-600",
-    },
-    {
       label: "Status",
       value: project.projectDetails.status,
       color:
@@ -58,11 +52,9 @@ export function ProjectDetails() {
         description={project.description}
         tags={project.projectDetails.tags}
       />
-
-      <FeatureList features={project.projectDetails.features} />
-
-      <ChallengesList challenges={project.projectDetails.challenges} />
-
+      {project.projectDetails.features && (
+        <FeatureList features={project.projectDetails.features} />
+      )}
       <ProjectStats stats={stats} />
 
       <ProjectActions

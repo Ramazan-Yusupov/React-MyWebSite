@@ -12,7 +12,7 @@ interface ProjectStatsProps {
 
 export function ProjectStats({ stats }: ProjectStatsProps) {
   return (
-    <div className="grid grid-cols-2 gap-4 rounded-lg bg-slate-100 p-4 md:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 rounded-lg bg-slate-100 p-4 md:grid-cols-3">
       {stats.map((stat, index) => (
         <StatCard
           key={index}

@@ -2,7 +2,6 @@ import { GoDotFill } from "react-icons/go";
 import { FaDownload } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import { CONTACT_LINKS, PROFILE } from "@/config";
 import { smallTagItems } from "@/mockApi";
 import { BigTag, Button, Card, SmallTag } from "@/shared";
@@ -31,13 +30,15 @@ export function CardProfile() {
             </div>
           </div>
         </div>
-        <Link
-          to={PROFILE.resumeHref}
+        <a
+          target="_blank"
+          href={PROFILE.resumeHref}
+          download={PROFILE.resumeDownloadName}
           className="text-white-200 absolute top-5 right-5 flex items-center gap-3 md:top-8"
         >
           <span>{PROFILE.resumeLabel}</span>
           <FaDownload size={30} />
-        </Link>
+        </a>
 
         <Card className="bg-slate-300 px-4.5 py-5">
           <div className="flex flex-wrap gap-4 gap-y-2 max-md:justify-center">

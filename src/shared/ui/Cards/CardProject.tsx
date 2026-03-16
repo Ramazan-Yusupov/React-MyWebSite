@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { Card } from "./Card";
 import type { CardProjectProps } from "@/types";
 
-const linkClasses = "flex flex-col justify-center";
-const imageClasses = "h-40 md:h-31 object-cover rounded-xl";
 const contentClasses = "mt-2";
 const titleClasses = "font-bold text-lg";
-const descriptionClasses = "text-sm text-gray-500";
+const linkClasses = "flex flex-col justify-center";
+const imageClasses = "h-40 md:h-31 object-cover rounded-xl";
+const descriptionClasses = "text-sm text-gray-500 truncate";
 
 export function CardProject({
   id,
