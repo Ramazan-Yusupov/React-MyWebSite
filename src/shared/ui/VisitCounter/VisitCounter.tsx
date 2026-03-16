@@ -15,12 +15,8 @@ export const VisitCounter = () => {
 
   return (
     <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 dark:border-blue-800 dark:bg-blue-900/30">
-      <span className="relative mr-2 flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
-      </span>
       <span className="text-xs font-medium text-blue-700 dark:text-blue-300">
-        👁 {count.toLocaleString()} просмотров
+        👁 {count.toLocaleString()}
       </span>
     </div>
   );
