@@ -10,7 +10,7 @@ export function CardLink({
   title,
   target,
   className = "",
-  height = "xl",
+  size = "xl",
   iconArrowRight,
 }: CardLinkProps) {
   const baseClasses = `bg-slate-100 p-2 rounded-xl w-full flex justify-between items-center h-fit gap-2 ${className}`;
@@ -18,7 +18,7 @@ export function CardLink({
   const Content = (
     <>
       <div className="flex min-w-0 items-center gap-2">
-        <IconBlock icon={icon} height={height} />
+        <IconBlock icon={icon} size={size} />
         <div className="text-white-200 truncate text-base whitespace-nowrap">
           {title}
         </div>

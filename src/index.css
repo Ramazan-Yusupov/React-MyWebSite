@@ -18,6 +18,12 @@ body {
   @apply px-4 pb-7 md:px-5;
 }
 
+@utility flex-i-between {
+  @apply flex items-center justify-between;
+}
+@utility flex-i-col {
+  @apply flex flex-col items-center;
+}
 @utility column-gap-5 {
   @apply flex flex-col gap-5;
 }

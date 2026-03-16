@@ -13,11 +13,27 @@ export interface GalleryItem {
 }
 
 export interface ProjectItem {
-  id: number;
+  id: string;
   title: string;
   description: string;
   imageUrl: string;
-  projectUrl: string;
+  link: string;
+  projectDetails: {
+    tags: { icon: React.ReactNode; text: string; href: string }[];
+    features: {
+      text: string;
+      icon: React.ReactNode;
+    }[];
+    github: string;
+    difficulty:
+      | "Пет Проект"
+      | "Управлял Проектом"
+      | "Junior"
+      | "Middle"
+      | "Senior"; // Уровень сложности
+    duration: string; // "3 месяца", "2 недели" и т.д.
+    status: "Completed" | "In Progress" | "Planning";
+  };
 }
 
 export interface ServicesProps {
@@ -55,16 +71,16 @@ export interface CardLinkProps {
   title: string;
   target?: React.HTMLAttributeAnchorTarget;
   className?: string;
-  height?: SizeVariant;
+  size?: SizeVariant;
   icon: React.ReactNode;
   iconArrowRight?: boolean;
 }
 
 export interface CardProjectProps {
+  id: string;
   title: string;
   description: string;
   imageUrl: string;
-  projectUrl: string;
 }
 
 export interface CardStatProps {
@@ -74,8 +90,9 @@ export interface CardStatProps {
 }
 
 export interface IconProps {
-  height?: SizeVariant;
+  size?: SizeVariant;
   icon: React.ReactNode;
+  className?: string;
 }
 
 export interface BigTagProps {

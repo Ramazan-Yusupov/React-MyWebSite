@@ -16,7 +16,7 @@ export function CardFollow() {
       header
       text={CARDS_CONTENT.follow.text}
       title={CARDS_CONTENT.follow.title}
-      className="card-section-padding"
+      className="card-section-padding pb-10"
       iconText={<IoShareSocial />}
     >
       <div className="grid grid-cols-1 gap-2 pt-2.5 sm:grid-cols-2">

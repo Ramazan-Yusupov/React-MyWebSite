@@ -16,7 +16,7 @@ export function CardWorkflow() {
         {frameworkItems.map((item) => (
           <CardLink
             key={item.id}
-            height="md"
+            size="md"
             target="_blank"
             title={item.title}
             href={item.href}
