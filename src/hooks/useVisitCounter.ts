@@ -47,8 +47,8 @@ export const useVisitCounter = (pageName: string = "home") => {
         // 1. Регистрируем посетителя (игнорируем результат, так как БД сама защитит от дублей)
         // Мы просто вызываем функцию, чтобы сработал триггер UNIQUE constraint
         const { error: regError } = await client.rpc("REGISTER_VISITOR", {
-          page: pageName,
-          visitor_id: visitorId,
+          p_page: pageName,
+          p_visitor_id: visitorId,
         });
 
         if (regError) throw regError;
@@ -57,7 +57,7 @@ export const useVisitCounter = (pageName: string = "home") => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { data: countData, error: countError } = await client.rpc(
           "GET_UNIQUE_COUNT",
-          { page: pageName },
+          { p_page: pageName },
         );
 
         if (countError) throw countError;
