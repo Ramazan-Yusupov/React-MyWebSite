@@ -10,7 +10,7 @@ export const VisitCounter = () => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       // Можно усложнить проверку, добавив секретный ключ, например &secret=hr2026
-      const showStats = params.get("show_stats") === "true";
+      const showStats = params.get("count") === "true";
       // const secret = params.get('secret');
 
       if (showStats) {
