@@ -28,7 +28,7 @@ export const VisitCounter = () => {
       <div className="grid w-full grid-cols-2 gap-4 pb-4 xl:grid-cols-4">
         <div className="w-full rounded-lg bg-slate-800 p-4 text-center">
           <p className="text-xs font-medium tracking-wider text-gray-400 uppercase">
-            Всего
+            Пользователей
           </p>
           <p className="mt-1 text-2xl font-bold text-white">
             {stats.uniqueTotal.toLocaleString()}

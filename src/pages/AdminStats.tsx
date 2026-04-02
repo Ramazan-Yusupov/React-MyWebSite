@@ -35,7 +35,7 @@ export const AdminStats = () => {
   // Если не авторизован — показываем форму входа
   if (!isAuthorized) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-900 text-white">
+      <div className="flex min-h-screen items-center justify-center bg-gray-900 px-3 text-white">
         <Card className="w-full max-w-md space-y-6 border-gray-700 bg-gray-800 p-8">
           <h2 className="text-center text-2xl font-bold">Доступ ограничен</h2>
           <p className="py-2 text-center text-sm text-gray-400">
@@ -69,7 +69,7 @@ export const AdminStats = () => {
 
   // Если авторизован — показываем дашборд
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen px-3 py-4">
       <div className="mx-auto max-w-6xl space-y-6">
         <div className="mb-8 flex items-center justify-between gap-5 max-md:flex-col">
           <h1 className="text-2xl font-bold whitespace-nowrap md:text-3xl">
