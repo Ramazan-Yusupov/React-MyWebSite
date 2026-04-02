@@ -1,9 +1,9 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 
+// ... (код подключения и generateVisitorId без изменений)
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
 let supabaseClient: SupabaseClient | null = null;
 
 const getSupabaseClient = (): SupabaseClient | null => {
@@ -14,7 +14,6 @@ const getSupabaseClient = (): SupabaseClient | null => {
   return supabaseClient;
 };
 
-// Функция для генерации простого уникального ID
 const generateVisitorId = (): string => {
   if (typeof window === "undefined") return "server-id";
   let id = localStorage.getItem("site_visitor_id");
@@ -25,8 +24,23 @@ const generateVisitorId = (): string => {
   return id;
 };
 
+// Обновленный тип
+export interface VisitStats {
+  uniqueTotal: number;
+  today: number;
+  week: number;
+  month: number;
+  history: { day: string; count: number }[]; // Данные для графика
+}
+
 export const useVisitCounter = (pageName: string = "home") => {
-  const [count, setCount] = useState<number>(0);
+  const [stats, setStats] = useState<VisitStats>({
+    uniqueTotal: 0,
+    today: 0,
+    week: 0,
+    month: 0,
+    history: [],
+  });
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -40,30 +54,76 @@ export const useVisitCounter = (pageName: string = "home") => {
       return;
     }
 
-    const initCounter = async () => {
+    const fetchStats = async () => {
       try {
         const visitorId = generateVisitorId();
 
-        // 1. Регистрируем посетителя (игнорируем результат, так как БД сама защитит от дублей)
-        // Мы просто вызываем функцию, чтобы сработал триггер UNIQUE constraint
-        const { error: regError } = await client.rpc("REGISTER_VISITOR", {
+        // 1 & 2. Логирование (без изменений)
+        await client.rpc("REGISTER_VISITOR", {
+          p_page: pageName,
+          p_visitor_id: visitorId,
+        });
+        await client.rpc("LOG_VISIT_EVENT", {
           page: pageName,
           visitor_id: visitorId,
         });
 
-        if (regError) throw regError;
-
-        // 2. Получаем актуальное количество уникальных пользователей
+        // 3. Уникальные
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        const { data: countData, error: countError } = await client.rpc(
+        const { data: uniqueData, error: uniqueError } = await client.rpc(
           "GET_UNIQUE_COUNT",
-          { page: pageName },
+          { p_page: pageName },
         );
 
-        if (countError) throw countError;
+        // 4. Активность (сводная)
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const { data: activityData, error: activityError } = await client.rpc(
+          "GET_ACTIVITY_STATS",
+          { p_page: pageName },
+        );
+
+        // 5. История для графика (Новое!)
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const { data: historyData, error: historyError } = await client.rpc(
+          "GET_VISIT_HISTORY",
+          {
+            page: pageName,
+            days_count: 14,
+          },
+        );
+
+        if (uniqueError || activityError || historyError) {
+          // eslint-disable-next-line @typescript-eslint/only-throw-error
+          throw uniqueError || activityError || historyError;
+        }
 
         if (isMounted) {
-          setCount(Number(countData));
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          const activity = Array.isArray(activityData)
+            ? activityData[0]
+            : activityData;
+
+          // Преобразуем данные истории в формат для Recharts
+          const formattedHistory = Array.isArray(historyData)
+            ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              historyData.map((item: any) => ({
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+                day: item.day_date,
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+                count: Number(item.visit_count),
+              }))
+            : [];
+
+          setStats({
+            uniqueTotal: Number(uniqueData),
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+            today: Number(activity?.today || 0),
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+            week: Number(activity?.this_week || 0),
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+            month: Number(activity?.this_month || 0),
+            history: formattedHistory,
+          });
           setError(null);
         }
       } catch (err: unknown) {
@@ -77,12 +137,12 @@ export const useVisitCounter = (pageName: string = "home") => {
       }
     };
 
-    void initCounter();
+    void fetchStats();
 
     return () => {
       isMounted = false;
     };
   }, [pageName]);
 
-  return { count, loading, error };
+  return { stats, loading, error };
 };

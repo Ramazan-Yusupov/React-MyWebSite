@@ -7,14 +7,10 @@ import {
   CardStatContainer,
   CardWorkflow,
 } from "@/features";
-import { VisitCounter } from "@/shared";
 
 export function Home() {
   return (
-    <>
-      <div className="absolute top-1 right-5">
-        <VisitCounter />
-      </div>
+    <div className="px-5 py-5 lg:px-10">
       <div className="grid grid-cols-[1fr_auto_auto] gap-5 max-2xl:hidden">
         <div className="column-gap-5 max-w-203">
           <CardProfile />
@@ -48,6 +44,6 @@ export function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

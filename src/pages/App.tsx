@@ -3,14 +3,16 @@ import { Layout } from "../Layout";
 import { Home } from "./Home/Home";
 import { PAGES } from "@/config";
 import { ProjectDetails } from "@/features/ProjectDetails/ProjectDetails";
+import { AdminStats } from "./AdminStats";
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path={PAGES.HOME} element={<Home />} />
         <Route path={PAGES.PROJECTID} element={<ProjectDetails />} />
-      </Routes>
-    </Layout>
+      </Route>
+      <Route path={PAGES.ADMIN_STATS} element={<AdminStats />} />
+    </Routes>
   );
 }

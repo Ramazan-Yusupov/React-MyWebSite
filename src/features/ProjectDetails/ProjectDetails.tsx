@@ -42,25 +42,27 @@ export function ProjectDetails() {
   ];
 
   return (
-    <Card className="px-4 py-4 md:px-8 md:py-8">
-      <ProjectHeader projectLink={project.link} />
+    <div className="mx-4">
+      <Card maxWidth={1200} className="my-4 px-4 py-4 md:px-8 md:py-8">
+        <ProjectHeader projectLink={project.link} />
 
-      <ProjectHero imageUrl={project.imageUrl} alt={project.title} />
+        <ProjectHero imageUrl={project.imageUrl} alt={project.title} />
 
-      <ProjectInfo
-        title={project.title}
-        description={project.description}
-        tags={project.projectDetails.tags}
-      />
-      {project.projectDetails.features && (
-        <FeatureList features={project.projectDetails.features} />
-      )}
-      <ProjectStats stats={stats} />
+        <ProjectInfo
+          title={project.title}
+          description={project.description}
+          tags={project.projectDetails.tags}
+        />
+        {project.projectDetails.features && (
+          <FeatureList features={project.projectDetails.features} />
+        )}
+        <ProjectStats stats={stats} />
 
-      <ProjectActions
-        github={project.projectDetails.github}
-        liveDemo={project.link}
-      />
-    </Card>
+        <ProjectActions
+          github={project.projectDetails.github}
+          liveDemo={project.link}
+        />
+      </Card>
+    </div>
   );
 }
