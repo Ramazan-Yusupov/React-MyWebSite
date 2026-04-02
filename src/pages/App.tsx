@@ -3,7 +3,7 @@ import { Layout } from "../Layout";
 import { Home } from "./Home/Home";
 import { PAGES } from "@/config";
 import { ProjectDetails } from "@/features/ProjectDetails/ProjectDetails";
-import { VisitStatistic } from "./VisitStatistic/VisitStatistic";
+import { AdminStats } from "./AdminStats";
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         <Route path={PAGES.HOME} element={<Home />} />
         <Route path={PAGES.PROJECTID} element={<ProjectDetails />} />
       </Route>
-      <Route path={PAGES.VISIT_STATISTIC} element={<VisitStatistic />} />
+      <Route path={PAGES.ADMIN_STATS} element={<AdminStats />} />
     </Routes>
   );
 }

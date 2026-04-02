@@ -1,5 +1,5 @@
 export const PAGES = {
   HOME: "/",
   PROJECTID: "/project/:id",
-  VISIT_STATISTIC: "/VisitStatistic",
+  ADMIN_STATS: "/admin",
 };
