@@ -58,15 +58,34 @@ export const useVisitCounter = (pageName: string = "home") => {
       try {
         const visitorId = generateVisitorId();
 
-        // 1 & 2. Логирование (без изменений)
+        // --- ЗАЩИТА ОТ УДВОЕНИЯ (SESSION STORAGE) ---
+        // Создаем уникальный ID для этой вкладки браузера, если его нет
+        const tabSessionId =
+          sessionStorage.getItem("tab_session_id") || crypto.randomUUID();
+        if (!sessionStorage.getItem("tab_session_id")) {
+          sessionStorage.setItem("tab_session_id", tabSessionId);
+        }
+
+        // Ключ для проверки: "logged_home_уникальный_ид_вкладки"
+        const logKey = `logged_${pageName}_${tabSessionId}`;
+        const hasLogged = sessionStorage.getItem(logKey);
+        // --------------------------------------------
+
+        // 1. Регистрируем уникального пользователя (БД защитит от дублей по visitor_id)
         await client.rpc("REGISTER_VISITOR", {
           p_page: pageName,
           p_visitor_id: visitorId,
         });
-        await client.rpc("LOG_VISIT_EVENT", {
-          page: pageName,
-          visitor_id: visitorId,
-        });
+
+        // 2. Логируем событие ТОЛЬКО если в этой вкладке еще не логировали
+        if (!hasLogged) {
+          await client.rpc("LOG_VISIT_EVENT", {
+            page: pageName,
+            visitor_id: visitorId,
+          });
+          // Ставим метку, что событие отправлено
+          sessionStorage.setItem(logKey, "true");
+        }
 
         // 3. Уникальные
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -141,6 +160,10 @@ export const useVisitCounter = (pageName: string = "home") => {
 
     return () => {
       isMounted = false;
+      // Мы НЕ очищаем sessionStorage здесь.
+      // Он очистится сам, когда пользователь закроет вкладку браузера.
+      // Это гарантирует, что при любых внутренних перерисовках React
+      // событие уйдет только один раз за время жизни вкладки.
     };
   }, [pageName]);
 
