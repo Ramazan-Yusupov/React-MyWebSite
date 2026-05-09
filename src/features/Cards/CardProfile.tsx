@@ -4,18 +4,14 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { CONTACT_LINKS, PROFILE } from "@/config";
 import { smallTagItems } from "@/mockApi";
-import { BigTag, Button, Card, SmallTag } from "@/shared";
+import { Avatar, BigTag, Button, Card, SmallTag } from "@/shared";
 
 export function CardProfile() {
   return (
     <Card>
       <div className="relative flex flex-col gap-3 px-5 py-7.5">
         <div className="flex gap-3 max-md:mt-10 max-md:flex-col max-md:items-center">
-          <img
-            src={PROFILE.avatarSrc}
-            alt={PROFILE.name}
-            className="w-32.5 rounded-xl"
-          />
+          <Avatar src={PROFILE.avatarSrc} alt={PROFILE.name} />
           <div className="flex flex-col gap-4 max-md:items-center max-md:gap-3">
             <BigTag
               className="w-50"

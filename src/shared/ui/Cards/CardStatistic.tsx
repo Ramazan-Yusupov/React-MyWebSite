@@ -2,7 +2,7 @@ import type { CardStatProps } from "@/types";
 import { BigTag } from "../Tags/BigTag";
 import { Card } from "./Card";
 
-export function CardStatistick({ num, text, icon }: CardStatProps) {
+export function CardStatistic({ num, text, icon }: CardStatProps) {
   return (
     <Card className="flex h-49.25 flex-col items-center justify-center gap-2 px-2.5 pb-5.5">
       <div className="flex items-center justify-center text-5xl">

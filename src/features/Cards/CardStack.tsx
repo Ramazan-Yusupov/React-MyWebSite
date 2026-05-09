@@ -9,12 +9,11 @@ export function CardStack() {
   return (
     <Card
       header
-      text={CARDS_CONTENT.stack.text}
       title={CARDS_CONTENT.stack.title}
       className="card-section-padding"
       iconText={<RiToolsLine />}
     >
-      <div className="grid grid-cols-1 gap-2 pt-2 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-2 py-2.5 sm:grid-cols-2">
         <CardLink
           target="_blank"
           title="GitHub"

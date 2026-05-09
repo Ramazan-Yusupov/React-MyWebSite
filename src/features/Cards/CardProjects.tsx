@@ -7,7 +7,6 @@ export function CardProjects() {
   return (
     <Card
       header
-      text={CARDS_CONTENT.projects.text}
       title={CARDS_CONTENT.projects.title}
       className="flex flex-col items-center justify-center px-5 pb-10"
       iconText={<GoProjectRoadmap />}

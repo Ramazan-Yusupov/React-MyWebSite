@@ -10,7 +10,6 @@ export function CardServices() {
       header
       iconText={<IoGrid />}
       className="card-section-padding pb-10"
-      text={CARDS_CONTENT.services.text}
       title={CARDS_CONTENT.services.title}
     >
       <Marquee

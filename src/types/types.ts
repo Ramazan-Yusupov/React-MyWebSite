@@ -1,5 +1,7 @@
 type SizeVariant = "xl" | "md" | "sm";
 
+export type AvatarSize = "sm" | "md" | "lg";
+
 export interface FrameProps {
   id: number;
   icon: React.ReactNode;
@@ -54,12 +56,9 @@ export interface ButtonProps {
 }
 
 export interface CardProps {
-  text?: string;
-  href?: string;
   title?: string;
   header?: boolean;
   maxWidth?: number;
-  linkTitle?: string;
   className?: string;
   iconText?: React.ReactNode;
   children: React.ReactNode;
@@ -100,6 +99,16 @@ export interface BigTagProps {
   className?: string;
   icon?: React.ReactNode;
 }
+
+export interface AvatarProps {
+  src?: string;
+  alt: string;
+  editable?: boolean;
+  size?: AvatarSize;
+  className?: string;
+  onImageChange?: (file: File | null) => void;
+}
+
 export interface SmallTagProps {
   id?: number;
   href: string;
