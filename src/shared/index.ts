@@ -1,3 +1,4 @@
+export { Avatar } from "./ui/Avatar/Avatar";
 export { Button } from "./ui/Buttons/Button";
 export { Card } from "./ui/Cards/Card";
 export { CardLink } from "./ui/Cards/CardLink";
