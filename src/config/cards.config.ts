@@ -1,28 +1,20 @@
 export const CARDS_CONTENT = {
   follow: {
-    text: "Follow Me",
-    title: "Social Media",
+    title: "Соц. сети",
   },
   gallery: {
-    text: "Projects",
-    title: "Works Gallery",
-    linkTitle: "View Works",
+    title: "Проекты",
   },
   projects: {
-    text: "My Works",
-    title: "Projects",
+    title: "Проекты",
   },
   services: {
-    text: "Services",
-    title: "Solutions Suite",
-    linkTitle: "View All Services",
+    title: "Услуги",
   },
   stack: {
-    text: "My Favorite Tools",
-    title: "Tools",
+    title: "Инструменты",
   },
   workflow: {
-    text: "My Frameworks",
     title: "Frameworks",
   },
 } as const;

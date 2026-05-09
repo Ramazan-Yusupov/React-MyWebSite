@@ -56,12 +56,9 @@ export interface ButtonProps {
 }
 
 export interface CardProps {
-  text?: string;
-  href?: string;
   title?: string;
   header?: boolean;
   maxWidth?: number;
-  linkTitle?: string;
   className?: string;
   iconText?: React.ReactNode;
   children: React.ReactNode;

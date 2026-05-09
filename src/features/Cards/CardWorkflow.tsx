@@ -7,7 +7,6 @@ export function CardWorkflow() {
   return (
     <Card
       header
-      text={CARDS_CONTENT.workflow.text}
       title={CARDS_CONTENT.workflow.title}
       className="px-4 pb-4 md:px-5"
       iconText={<SiStackbit />}
