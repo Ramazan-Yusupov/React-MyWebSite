@@ -12,7 +12,7 @@ interface FeatureListProps {
 export function FeatureList({ features }: FeatureListProps) {
   return (
     <SectionCard
-      title="Key Features"
+      title="Ключевые особенности"
       icon={<CheckCircle2 className="h-6 w-6 text-green-600" />}
     >
       <div className="grid gap-4 lg:grid-cols-2">

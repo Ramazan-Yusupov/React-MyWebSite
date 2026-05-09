@@ -22,20 +22,20 @@ export function ProjectDetails() {
 
   const stats = [
     {
-      label: "Difficulty",
+      label: "",
       value: project.projectDetails.difficulty,
       color: "text-purple-600",
     },
     {
-      label: "Duration",
+      label: "Продолжительность",
       value: project.projectDetails.duration,
       color: "text-blue-600",
     },
     {
-      label: "Status",
+      label: "Статус",
       value: project.projectDetails.status,
       color:
-        project.projectDetails.status === "Completed"
+        project.projectDetails.status === "Завершено"
           ? "text-emerald-600"
           : "text-yellow-600",
     },

@@ -66,7 +66,7 @@ export const projectItems: ProjectItem[] = [
       github: "",
       difficulty: "Управлял Проектом",
       duration: "2 месяца",
-      status: "Completed",
+      status: "Завершено",
     },
   },
   {
@@ -113,7 +113,7 @@ export const projectItems: ProjectItem[] = [
       github: "",
       difficulty: "Управлял Проектом",
       duration: "3 месяца",
-      status: "Completed",
+      status: "Завершено",
     },
   },
   {
@@ -175,7 +175,7 @@ export const projectItems: ProjectItem[] = [
       github: "",
       difficulty: "Junior",
       duration: "8 месяцев",
-      status: "In Progress",
+      status: "В процессе",
     },
   },
   {
@@ -223,7 +223,7 @@ export const projectItems: ProjectItem[] = [
       github: "https://github.com/ramyus889/31SaaS",
       difficulty: "Пет Проект",
       duration: "4 дня",
-      status: "Completed",
+      status: "Завершено",
     },
   },
   {
@@ -279,7 +279,7 @@ export const projectItems: ProjectItem[] = [
       github: "https://github.com/ramyus889/LessonEnglish2",
       difficulty: "Пет Проект",
       duration: "2 месяца",
-      status: "In Progress",
+      status: "В процессе",
     },
   },
   {
@@ -331,7 +331,7 @@ export const projectItems: ProjectItem[] = [
       github: "https://github.com/ramyus889/MirrorWorld",
       difficulty: "Пет Проект",
       duration: "1 Неделя",
-      status: "Completed",
+      status: "Завершено",
     },
   },
 ];

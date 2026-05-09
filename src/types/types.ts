@@ -34,7 +34,7 @@ export interface ProjectItem {
       | "Middle"
       | "Senior"; // Уровень сложности
     duration: string; // "3 месяца", "2 недели" и т.д.
-    status: "Completed" | "In Progress" | "Planning";
+    status: "Завершено" | "В процессе" | "Планирование";
   };
 }
 
