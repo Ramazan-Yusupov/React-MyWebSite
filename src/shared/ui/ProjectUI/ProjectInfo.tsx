@@ -31,7 +31,7 @@ export function ProjectInfo({ title, description, tags }: ProjectInfoProps) {
         <div className="mb-4 flex items-center gap-2">
           <IconBlock icon={<BiCode size={25} />} />
           <h3 className="font-semibold text-gray-900 dark:text-white">
-            Technologies Used
+            Frameworks
           </h3>
         </div>
         <div className="flex flex-wrap gap-3 max-md:justify-center">
