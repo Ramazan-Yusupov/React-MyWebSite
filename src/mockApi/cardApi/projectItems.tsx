@@ -184,14 +184,9 @@ export const projectItems: ProjectItem[] = [
     description:
       "Это высококонверсионная платформа для продажи премиального Next.js шаблона, предназначенного для быстрой разработки SaaS-продуктов.",
     imageUrl: "/31SaaS.png",
-    link: "https://31-saa-s.vercel.app/",
+    link: "https://react-31-saas.vercel.app/",
     projectDetails: {
       tags: [
-        {
-          icon: <TbBrandNextjs />,
-          text: "Next.js",
-          href: "https://nextjs.org/",
-        },
         { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
         {
           icon: <SiTypescript />,
@@ -220,9 +215,9 @@ export const projectItems: ProjectItem[] = [
           icon: <GrOptimize size={20} />,
         },
       ],
-      github: "https://github.com/ramyus889/31SaaS",
+      github: "https://github.com/Ramazan-Yusupov/react-31Saas",
       difficulty: "Пет Проект",
-      duration: "4 дня",
+      duration: "2 дня",
       status: "Завершено",
     },
   },
