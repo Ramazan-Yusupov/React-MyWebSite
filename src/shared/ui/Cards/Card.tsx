@@ -1,4 +1,4 @@
-import { CardTitle } from "@/features";
+import { CardTitle } from "@/features/Cards/CardTitle";
 import { cn } from "@/lib";
 import type { CardProps } from "@/types";
 

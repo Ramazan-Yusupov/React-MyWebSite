@@ -1,11 +1,9 @@
 import type { ProjectItem } from "@/types";
 import { BiMobile } from "react-icons/bi";
 import { BsFiletypeScss } from "react-icons/bs";
-import { CgComponents, CgSearchLoading } from "react-icons/cg";
+import { CgComponents } from "react-icons/cg";
 import { DiReact } from "react-icons/di";
-import { GiLevelTwo } from "react-icons/gi";
 import { GrOptimize } from "react-icons/gr";
-import { LuComponent } from "react-icons/lu";
 import { MdDashboard, MdEmail, MdNotifications } from "react-icons/md";
 import {
   SiTypescript,
@@ -218,114 +216,6 @@ export const projectItems: ProjectItem[] = [
       github: "https://github.com/Ramazan-Yusupov/react-31Saas",
       difficulty: "Пет Проект",
       duration: "2 дня",
-      status: "Завершено",
-    },
-  },
-  {
-    id: "5",
-    title: "LessonEnglish",
-    description:
-      "Это полноценное образовательное веб-приложение (EdTech) с интерактивными уроками, тестами и системой прогресса",
-    imageUrl: "/LessonEng.png",
-    link: "https://lesson-english2-two.vercel.app/",
-    projectDetails: {
-      tags: [
-        {
-          icon: <TbBrandNextjs />,
-          text: "Next.js",
-          href: "https://nextjs.org/",
-        },
-        { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
-        {
-          icon: <SiTypescript />,
-          text: "TypeScript",
-          href: "https://www.typescriptlang.org/",
-        },
-        {
-          icon: <SiJavascript />,
-          text: "JavaScript",
-          href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-        },
-        {
-          icon: <SiTailwindcss />,
-          text: "Tailwind CSS",
-          href: "https://tailwindcss.com/",
-        },
-        { icon: <SiVercel />, text: "Vercel", href: "https://vercel.com/" },
-      ],
-      features: [
-        {
-          text: "Адаптивный дизайн с поддержкой мобильных устройств (Mobile First)",
-          icon: <BiMobile size={20} />,
-        },
-        {
-          text: "Оптимизированная производительность (Performance First)",
-          icon: <GrOptimize size={20} />,
-        },
-        {
-          text: "Интерактивные сценарии обучения",
-          icon: <LuComponent size={20} />,
-        },
-        {
-          text: "Структурированная навигация по уровням",
-          icon: <GiLevelTwo size={20} />,
-        },
-      ],
-      github: "https://github.com/ramyus889/LessonEnglish2",
-      difficulty: "Пет Проект",
-      duration: "2 месяца",
-      status: "В процессе",
-    },
-  },
-  {
-    id: "6",
-    title: "MirrorWorld",
-    description:
-      "Это яркий представитель жанра Web3 / NFT-проектов или Immersive Storytelling. Такие сайты требуют особого подхода к производительности, так как они обычно перегружены сложной графикой, 3D-элементами, анимациями и интерактивными картами.",
-    imageUrl: "/mirrorWorld.png",
-    link: "https://mirror-world-seven.vercel.app/",
-    projectDetails: {
-      tags: [
-        {
-          icon: <TbBrandNextjs />,
-          text: "Next.js",
-          href: "https://nextjs.org/",
-        },
-        { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
-        {
-          icon: <SiTypescript />,
-          text: "TypeScript",
-          href: "https://www.typescriptlang.org/",
-        },
-        {
-          icon: <SiJavascript />,
-          text: "JavaScript",
-          href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-        },
-        {
-          icon: <SiTailwindcss />,
-          text: "Tailwind CSS",
-          href: "https://tailwindcss.com/",
-        },
-        { icon: <SiVercel />, text: "Vercel", href: "https://vercel.com/" },
-      ],
-      features: [
-        {
-          text: "Адаптивный дизайн с поддержкой мобильных устройств (Mobile First)",
-          icon: <BiMobile size={20} />,
-        },
-        {
-          text: "Оптимизированная производительность (Performance First)",
-          icon: <GrOptimize size={20} />,
-        },
-        {
-          text: "Бесшовное повествование (Seamless Storytelling)",
-          icon: <CgSearchLoading size={20} />,
-        },
-      ],
-      github: "https://github.com/ramyus889/MirrorWorld",
-      difficulty: "Пет Проект",
-      duration: "1 Неделя",
       status: "Завершено",
     },
   },
