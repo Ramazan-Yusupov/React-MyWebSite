@@ -1,4 +1,4 @@
-import { Card, Skeleton } from "@/shared";
+import { Card, Skeleton, SkeletonButtonRow, SkeletonGroup } from "@/shared";
 
 export function SCardProfile() {
   return (
@@ -17,16 +17,13 @@ export function SCardProfile() {
         <Skeleton className="absolute top-5 right-5 h-8 w-40 md:top-8" />
 
         <Card className="bg-slate-300 px-4.5 py-5">
-          <div className="grid grid-cols-4 gap-4 gap-y-2 max-md:justify-center">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <Skeleton key={index} className="h-7 w-full" />
-            ))}
-          </div>
+          <SkeletonGroup
+            count={6}
+            className="h-7 w-full"
+            containerClassName="grid grid-cols-4 gap-4 gap-y-2 max-md:justify-center"
+          />
         </Card>
-        <div className="flex gap-3 max-sm:flex-col">
-          <Skeleton className="h-12 w-full" />
-          <Skeleton className="h-12 w-full" />
-        </div>
+        <SkeletonButtonRow />
       </div>
     </Card>
   );

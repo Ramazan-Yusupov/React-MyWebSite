@@ -4,7 +4,11 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { CONTACT_LINKS, PROFILE } from "@/config";
 import { smallTagItems } from "@/mockApi";
-import { Avatar, BigTag, Button, Card, SmallTag } from "@/shared";
+import { Avatar } from "@/shared/ui/Avatar/Avatar";
+import { Button } from "@/shared/ui/Buttons/Button";
+import { Card } from "@/shared/ui/Cards/Card";
+import { BigTag } from "@/shared/ui/Tags/BigTag";
+import { SmallTag } from "@/shared/ui/Tags/SmallTag";
 
 export function CardProfile() {
   return (
@@ -30,7 +34,7 @@ export function CardProfile() {
           target="_blank"
           href={PROFILE.resumeHref}
           download={PROFILE.resumeDownloadName}
-          className="text-white-200 absolute top-5 right-5 flex items-center gap-3 md:top-8"
+          className="text-white-200 hover:text-indigo absolute top-5 right-5 flex items-center gap-3 md:top-8"
         >
           <span>{PROFILE.resumeLabel}</span>
           <FaDownload size={30} />

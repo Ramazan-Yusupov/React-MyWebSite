@@ -1,7 +1,10 @@
 import { CARDS_CONTENT } from "@/config";
-import { Card, Skeleton } from "@/shared";
+import { Card, SkeletonGroup } from "@/shared";
 import Marquee from "react-fast-marquee";
 import { IoGrid } from "react-icons/io5";
+
+const marqueeRowClassName = "mt-2 flex gap-2 px-1";
+const marqueeItemClassName = "h-16 w-50 rounded-md";
 
 export function SCardServices() {
   return (
@@ -17,18 +20,18 @@ export function SCardServices() {
         gradientColor="#101010"
         gradientWidth={100}
       >
-        <div className="mt-2 flex gap-2 px-1">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <Skeleton key={index} className="h-16 w-50 rounded-md" />
-          ))}
-        </div>
+        <SkeletonGroup
+          count={8}
+          className={marqueeItemClassName}
+          containerClassName={marqueeRowClassName}
+        />
       </Marquee>
       <Marquee gradient={true} gradientColor="#101010" gradientWidth={100}>
-        <div className="mt-4 flex gap-2 px-1">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <Skeleton key={index} className="h-16 w-50 rounded-md" />
-          ))}
-        </div>
+        <SkeletonGroup
+          count={8}
+          className={marqueeItemClassName}
+          containerClassName="mt-4 flex gap-2 px-1"
+        />
       </Marquee>
     </Card>
   );

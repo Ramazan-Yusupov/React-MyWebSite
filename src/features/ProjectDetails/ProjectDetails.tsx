@@ -1,16 +1,13 @@
 import { useParams } from "react-router-dom";
 import { projectItems } from "@/mockApi";
-import { Card } from "@/shared";
-
-import {
-  ProjectNotFound,
-  ProjectHeader,
-  ProjectHero,
-  ProjectInfo,
-  FeatureList,
-  ProjectStats,
-  ProjectActions,
-} from "@/shared";
+import { Card } from "@/shared/ui/Cards/Card";
+import { FeatureList } from "@/shared/ui/ProjectUI/FeatureList";
+import { ProjectActions } from "@/shared/ui/ProjectUI/ProjectActions";
+import { ProjectHeader } from "@/shared/ui/ProjectUI/ProjectHeader";
+import { ProjectHero } from "@/shared/ui/ProjectUI/ProjectHero";
+import { ProjectInfo } from "@/shared/ui/ProjectUI/ProjectInfo";
+import { ProjectNotFound } from "@/shared/ui/ProjectUI/ProjectNotFound";
+import { ProjectStats } from "@/shared/ui/ProjectUI/ProjectStats";
 
 export function ProjectDetails() {
   const { id } = useParams<{ id: string }>();
@@ -46,7 +43,11 @@ export function ProjectDetails() {
       <Card maxWidth={1200} className="my-4 px-4 py-4 md:px-8 md:py-8">
         <ProjectHeader projectLink={project.link} />
 
-        <ProjectHero imageUrl={project.imageUrl} alt={project.title} />
+        <ProjectHero
+          imageUrl={project.imageUrl}
+          alt={project.title}
+          typeProject={project.typeProject}
+        />
 
         <ProjectInfo
           title={project.title}

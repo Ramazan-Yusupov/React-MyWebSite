@@ -2,7 +2,8 @@ import Marquee from "react-fast-marquee";
 import { IoGrid } from "react-icons/io5";
 import { CARDS_CONTENT } from "@/config";
 import { servicesItems } from "@/mockApi";
-import { Card, CardLink } from "@/shared";
+import { Card } from "@/shared/ui/Cards/Card";
+import { CardLink } from "@/shared/ui/Cards/CardLink";
 
 export function CardServices() {
   return (

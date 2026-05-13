@@ -4,6 +4,7 @@ import { IconBlock } from "../Icons/IconBlock";
 import { BiCode } from "react-icons/bi";
 
 interface Tag {
+  id?: number;
   icon: React.ReactNode;
   text: string;
   href: string;
@@ -37,7 +38,7 @@ export function ProjectInfo({ title, description, tags }: ProjectInfoProps) {
         <div className="flex flex-wrap gap-3 max-md:justify-center">
           {tags.map((tag, index) => (
             <SmallTag
-              key={index}
+              key={tag.id ?? `${tag.text}-${index}`}
               href={tag.href}
               icon={tag.icon}
               title={tag.text}
