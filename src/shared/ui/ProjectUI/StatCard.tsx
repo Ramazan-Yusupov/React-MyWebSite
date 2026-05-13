@@ -1,4 +1,4 @@
-import { Card } from "@/shared";
+import { Card } from "../Cards/Card";
 import type { ReactNode } from "react";
 
 interface StatCardProps {

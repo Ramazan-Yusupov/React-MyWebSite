@@ -11,8 +11,15 @@ export function Button({
   disabled = false,
   className = "",
 }: ButtonProps) {
-  const classes = `flex gap-3 items-center justify-center bg-slate-100 h-12 w-full rounded-lg ${className}`;
+  const classes = `flex gap-3 items-center justify-center bg-slate-100 group h-12 w-full rounded-lg ${className}`;
   const isExternalLink = href?.startsWith("http");
+
+  const content = (
+    <>
+      <span className="text-icon text-2xl">{icon}</span>
+      <p className="text-white-200 group-hover:text-indigo text-md">{title}</p>
+    </>
+  );
 
   if (href && isExternalLink) {
     return (
@@ -22,8 +29,7 @@ export function Button({
         rel={target === "_blank" ? "noreferrer" : undefined}
         className={classes}
       >
-        <span className="text-icon text-2xl">{icon}</span>
-        <p className="text-white-200 text-md">{title}</p>
+        {content}
       </a>
     );
   }
@@ -31,8 +37,7 @@ export function Button({
   if (href) {
     return (
       <Link to={href} target={target} className={classes}>
-        <span className="text-icon text-2xl">{icon}</span>
-        <p className="text-white-200 text-md">{title}</p>
+        {content}
       </Link>
     );
   }
@@ -44,8 +49,7 @@ export function Button({
       disabled={disabled}
       className={classes}
     >
-      <span className="text-icon text-2xl">{icon}</span>
-      <p className="text-white-200 text-md">{title}</p>
+      {content}
     </button>
   );
 }

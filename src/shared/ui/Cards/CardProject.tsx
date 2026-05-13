@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Card } from "./Card";
 import type { CardProjectProps } from "@/types";
+import { SmallTag } from "../Tags/SmallTag";
+import { cn } from "@/lib";
 
 const contentClasses = "mt-2";
 const titleClasses = "font-bold text-lg";
@@ -12,6 +14,7 @@ export function CardProject({
   id,
   title,
   imageUrl,
+  typeProject,
   description,
 }: CardProjectProps) {
   const content = (
@@ -21,12 +24,17 @@ export function CardProject({
         <h3 className={titleClasses}>{title}</h3>
         <p className={descriptionClasses}>{description}</p>
       </div>
+      <SmallTag
+        icon={null}
+        title={typeProject}
+        className="absolute top-2 right-2"
+      />
     </>
   );
 
   return (
     <Card className="mt-4 bg-slate-100 p-3.5">
-      <Link to={`/project/${id}`} className={linkClasses}>
+      <Link to={`/project/${id}`} className={cn(linkClasses, "group relative")}>
         {content}
       </Link>
     </Card>

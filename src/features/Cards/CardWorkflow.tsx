@@ -1,7 +1,8 @@
 import { SiStackbit } from "react-icons/si";
 import { CARDS_CONTENT } from "@/config";
 import { frameworkItems } from "@/mockApi";
-import { Card, CardLink } from "@/shared";
+import { Card } from "@/shared/ui/Cards/Card";
+import { CardLink } from "@/shared/ui/Cards/CardLink";
 
 export function CardWorkflow() {
   return (

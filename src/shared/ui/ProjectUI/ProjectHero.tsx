@@ -1,4 +1,5 @@
 import type { ProjectHeroProps } from "@/types";
+import { SmallTag } from "../Tags/SmallTag";
 
 const heightMap = {
   sm: "h-48 md:h-64",
@@ -9,15 +10,21 @@ const heightMap = {
 export function ProjectHero({
   imageUrl,
   alt,
+  typeProject,
   height = "md",
 }: ProjectHeroProps) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl">
-      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    <div className="relative overflow-hidden rounded-2xl">
       <img
         src={imageUrl}
         alt={alt}
-        className={`${heightMap[height]} w-full object-cover transition-transform duration-500 group-hover:scale-105`}
+        className={`${heightMap[height]} w-full object-cover transition-transform duration-500`}
+      />
+
+      <SmallTag
+        icon={null}
+        title={typeProject}
+        className="absolute top-2 right-2"
       />
     </div>
   );

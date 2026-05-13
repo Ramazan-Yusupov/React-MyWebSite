@@ -1,47 +1,22 @@
-import { SCardFollow } from "@/features/Cards/SCardFollow";
-import { SCardProfile } from "@/features/Cards/SCardProfile";
-import { SCardProjects } from "@/features/Cards/SCardProjects";
-import { SCardServices } from "@/features/Cards/SCardServices";
-import { SCardStack } from "@/features/Cards/SCardStack";
-import { SCardStatContainer } from "@/features/Cards/SCardStatContainer";
-import { SCardWorkflow } from "@/features/Cards/SCardWorkflow";
-import { lazy, Suspense } from "react";
-
-const CardProfile = lazy(() =>
-  import("@/features/Cards/CardProfile").then((module) => ({
-    default: module.CardProfile,
-  })),
-);
-const CardProjects = lazy(() =>
-  import("@/features/Cards/CardProjects").then((module) => ({
-    default: module.CardProjects,
-  })),
-);
-const CardStack = lazy(() =>
-  import("@/features/Cards/CardStack").then((module) => ({
-    default: module.CardStack,
-  })),
-);
-const CardServices = lazy(() =>
-  import("@/features/Cards/CardServices").then((module) => ({
-    default: module.CardServices,
-  })),
-);
-const CardFollow = lazy(() =>
-  import("@/features/Cards/CardFollow").then((module) => ({
-    default: module.CardFollow,
-  })),
-);
-const CardWorkflow = lazy(() =>
-  import("@/features/Cards/CardWorkflow").then((module) => ({
-    default: module.CardWorkflow,
-  })),
-);
-const CardStatContainer = lazy(() =>
-  import("@/features/Cards/CardStatContainer").then((module) => ({
-    default: module.CardStatContainer,
-  })),
-);
+import { Suspense } from "react";
+import {
+  SCardFollow,
+  SCardProfile,
+  SCardProjects,
+  SCardServices,
+  SCardStack,
+  SCardStatContainer,
+  SCardWorkflow,
+} from "@/features/SCards";
+import {
+  CardFollow,
+  CardProfile,
+  CardProjects,
+  CardServices,
+  CardStack,
+  CardStatContainer,
+  CardWorkflow,
+} from "@/features/Cards/lazyCards";
 
 export function Home() {
   return (

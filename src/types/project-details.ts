@@ -10,6 +10,7 @@ export interface ProjectHeroProps {
   imageUrl: string;
   alt: string;
   height?: "sm" | "md" | "lg";
+  typeProject: string;
 }
 
 export interface TechTag {

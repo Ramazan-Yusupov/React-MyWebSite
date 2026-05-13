@@ -23,6 +23,7 @@ export const projectItems: ProjectItem[] = [
       "Креативная продакшн-компания с более чем 50-летней историей, специализирующаяся на создании контента для телевидения, рекламы и развлекательной индустрии.",
     imageUrl: "/wruniversal.png",
     link: "https://wruniversal.com/",
+    typeProject: "Коммерческий сайт",
     projectDetails: {
       tags: [
         { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
@@ -70,6 +71,7 @@ export const projectItems: ProjectItem[] = [
   {
     id: "2",
     title: "AIPStudios",
+    typeProject: "Коммерческий сайт",
     description:
       "Иммерсивный цифровой опыт, посвященный наследию легендарной киностудии American International Pictures. Сайт представляет собой современную витрину более чем 150 культовых фильмов, работавших с ними легенд кино и исторических достижений студии.",
     imageUrl: "/aipstudios.png",
@@ -117,6 +119,7 @@ export const projectItems: ProjectItem[] = [
   {
     id: "3",
     title: "Unco-Scanner",
+    typeProject: "Коммерческий сайт",
     description:
       "Это многофункциональная веб-платформа нового поколения, объединяющая в себе возможности личного кабинета, e-commerce магазина и образовательного хаба",
     imageUrl: "/uncoscanner.png",
@@ -179,6 +182,7 @@ export const projectItems: ProjectItem[] = [
   {
     id: "4",
     title: "31SaaS",
+    typeProject: "Пет-проект",
     description:
       "Это высококонверсионная платформа для продажи премиального Next.js шаблона, предназначенного для быстрой разработки SaaS-продуктов.",
     imageUrl: "/31SaaS.png",

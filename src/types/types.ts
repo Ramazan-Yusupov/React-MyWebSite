@@ -20,6 +20,7 @@ export interface ProjectItem {
   description: string;
   imageUrl: string;
   link: string;
+  typeProject: string;
   projectDetails: {
     tags: { icon: React.ReactNode; text: string; href: string }[];
     features: {
@@ -80,6 +81,7 @@ export interface CardProjectProps {
   title: string;
   description: string;
   imageUrl: string;
+  typeProject: string;
 }
 
 export interface CardStatProps {
@@ -111,7 +113,7 @@ export interface AvatarProps {
 
 export interface SmallTagProps {
   id?: number;
-  href: string;
+  href?: string;
   title: string;
   icon: React.ReactNode;
   className?: string;

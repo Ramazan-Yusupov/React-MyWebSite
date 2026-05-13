@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Card } from "@/shared";
 import { PAGES } from "@/config";
 import { AlertCircle, ArrowLeft } from "lucide-react";
+import { Card } from "../Cards/Card";
 
 export function ProjectNotFound() {
   return (
@@ -10,17 +10,17 @@ export function ProjectNotFound() {
         <AlertCircle className="h-8 w-8 text-red-600 dark:text-red-400" />
       </div>
       <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
-        Project not found
+        Проект не найден
       </h2>
       <p className="mb-6 text-gray-600 dark:text-gray-400">
-        The project you're looking for doesn't exist or has been removed.
+        Проект, который вы ищете, не существует или был удален.
       </p>
       <Link
         to={PAGES.HOME}
-        className="bg-primary-600 hover:bg-primary-700 inline-flex items-center gap-2 rounded-lg px-6 py-3 font-medium text-white transition-colors"
+        className="hover:text-indigo inline-flex items-center gap-2 rounded-lg px-6 py-3 font-medium text-white transition-colors"
       >
         <ArrowLeft className="h-4 w-4" />
-        Back to home
+        Назад на главную
       </Link>
     </Card>
   );

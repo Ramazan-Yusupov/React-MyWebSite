@@ -9,9 +9,16 @@ export { BigTag } from "./ui/Tags/BigTag";
 export { IconBlock } from "./ui/Icons/IconBlock";
 export { LoadingUI } from "./ui/LoadErr/LoadingUI";
 export { ErrorUI } from "./ui/LoadErr/ErrorUI";
-export { VisitCounter } from "./ui/VisitCounter/VisitCounter";
 export { SectionCard } from "./ui/Cards/SectionCard";
 export { Skeleton } from "./ui/Skeleton/Skeleton";
+export {
+  SkeletonButtonRow,
+  SkeletonCard,
+  SkeletonGroup,
+  SkeletonPills,
+  SkeletonStatsGrid,
+  SkeletonTextBlock,
+} from "./ui/Skeleton/SkeletonBlocks";
 export { StatCard } from "./ui/ProjectUI/StatCard";
 export { ProjectNotFound } from "./ui/ProjectUI/ProjectNotFound";
 export { ProjectHeader } from "./ui/ProjectUI/ProjectHeader";

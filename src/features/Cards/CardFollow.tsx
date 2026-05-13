@@ -2,7 +2,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
 import { CARDS_CONTENT, SOCIAL_LINKS } from "@/config";
-import { Card, CardLink } from "@/shared";
+import { Card } from "@/shared/ui/Cards/Card";
+import { CardLink } from "@/shared/ui/Cards/CardLink";
 
 export function CardFollow() {
   const socialIcons = {
