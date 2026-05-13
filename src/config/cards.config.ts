@@ -9,7 +9,7 @@ export const CARDS_CONTENT = {
     title: "Проекты",
   },
   services: {
-    title: "Услуги",
+    title: "Навыки",
   },
   stack: {
     title: "Инструменты",
