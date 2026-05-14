@@ -223,4 +223,48 @@ export const projectItems: ProjectItem[] = [
       status: "Завершено",
     },
   },
+  {
+    id: "5",
+    title: "JotForm",
+    typeProject: "Пет-проект",
+    description:
+      "Создавайте формы Jotform непосредственно в Claude, используя простые подсказки. Эта интеграция связывает ваши формы с Claude, позволяя создавать, редактировать и управлять ими в режиме диалога. Благодаря поддержке Jotform MCP вы также можете использовать более наглядный интерфейс, сохраняя при этом полный контроль над своими формами и отправками.",
+    imageUrl: "/Jotform.png",
+    link: "https://react-jotform.vercel.app/",
+    projectDetails: {
+      tags: [
+        { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
+        {
+          icon: <SiTypescript />,
+          text: "TypeScript",
+          href: "https://www.typescriptlang.org/",
+        },
+        {
+          icon: <SiJavascript />,
+          text: "JavaScript",
+          href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        },
+        {
+          icon: <SiTailwindcss />,
+          text: "Tailwind CSS",
+          href: "https://tailwindcss.com/",
+        },
+        { icon: <SiVercel />, text: "Vercel", href: "https://vercel.com/" },
+      ],
+      features: [
+        {
+          text: "Адаптивный дизайн с поддержкой мобильных устройств (Mobile First)",
+          icon: <BiMobile size={20} />,
+        },
+        {
+          text: "Оптимизированная производительность (Performance First)",
+          icon: <GrOptimize size={20} />,
+        },
+      ],
+      github: "https://github.com/Ramazan-Yusupov/react-jotform",
+      difficulty: "Пет Проект",
+      duration: "2 дня",
+      status: "Завершено",
+    },
+  },
 ];
