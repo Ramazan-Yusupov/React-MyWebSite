@@ -150,12 +150,5 @@ React-MyWebSite/
 - GitHub: [@Ramazan-Yusupov](https://github.com/Ramazan-Yusupov)
 - Веб-сайт: [https://react-my-web-site.vercel.app](https://react-my-web-site.vercel.app)
 
----
 
-## 🤝 Вклад
 
-Если у вас есть идеи для улучшения, не стесняйтесь открывать issues и pull requests!
-
----
-
-**Создано с ❤️ на React**
