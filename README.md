@@ -1,73 +1,163 @@
-# React + TypeScript + Vite
+# 🌐 React-MyWebSite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Персональный веб-сайт, разработанный с использованием современного стека технологий React, TypeScript и Vite.
 
-Currently, two official plugins are available:
+**🔗 Демо:** [https://react-my-web-site.vercel.app](https://react-my-web-site.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📋 О проекте
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Это полнофункциональное веб-приложение, которое служит личным портфолио и визиткой. Проект демонстрирует лучшие практики разработки на React с использованием TypeScript для обеспечения типобезопасности и улучшения качества кода.
 
-## Expanding the ESLint configuration
+### ✨ Основные возможности
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **⚡ Быстрая разработка** - Vite обеспечивает молниеносный HMR (Hot Module Replacement)
+- **🎨 Стильный дизайн** - Tailwind CSS для быстрого и гибкого стилизации
+- **🧭 Навигация** - React Router для многостраничного приложения (SPA)
+- **📱 Адаптивный дизайн** - Оптимизировано для всех размеров экранов
+- **🔒 TypeScript** - Полная типизация для надежности кода
+- **🛠️ Инструменты разработки** - ESLint, Prettier, Husky для качества кода
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Технологический стек
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+### Основные зависимости
+
+- **React** 19.2.6 - Библиотека для создания пользовательских интерфейсов
+- **TypeScript** 5.9.3 - Язык с поддержкой типов
+- **Vite** 7.3.1 - Инструмент сборки нового поколения
+- **React Router** 7.15.0 - Маршрутизация между страницами
+- **Tailwind CSS** 4.3.0 - Утилит-первый фреймворк CSS
+- **Lucide React** 0.576.0 - Библиотека иконок
+- **React Icons** 5.6.0 - Дополнительные иконки
+
+### Инструменты разработки
+
+- **ESLint** - Анализ кода для выявления ошибок
+- **Prettier** - Автоматическое форматирование кода
+- **Husky** - Git хуки для проверки кода перед коммитом
+- **Lint-staged** - Запуск линтеров только на измененных файлах
+
+---
+
+## 🚀 Установка и запуск
+
+### Требования
+
+- Node.js (версия 16 или выше)
+- npm или yarn
+
+### 📦 Установка
+
+Клонируйте репозиторий:
+
+```bash
+git clone https://github.com/Ramazan-Yusupov/React-MyWebSite.git
+cd React-MyWebSite
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Установите зависимости:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm install
 ```
+
+### 🎯 Запуск проекта
+
+Запуск в режиме разработки:
+
+```bash
+npm run dev
+```
+
+Приложение будет доступно по адресу: [http://localhost:5173](http://localhost:5173)
+
+### 🏗️ Сборка для продакшена
+
+Создать оптимизированную версию:
+
+```bash
+npm run build
+```
+
+Результат будет находиться в папке `dist/`
+
+### 👁️ Предпросмотр собранного проекта
+
+Просмотреть собранный проект локально:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🧹 Дополнительные команды
+
+### Проверка качества кода
+
+Запустить ESLint для анализа:
+
+```bash
+npm run lint
+```
+
+### Форматирование кода
+
+Автоматическое форматирование всех файлов:
+
+```bash
+npm run format
+```
+
+Проверка форматирования без изменений:
+
+```bash
+npm run format:check
+```
+
+---
+
+## 📁 Структура проекта
+
+```
+React-MyWebSite/
+├── src/
+│   ├── components/        # Переиспользуемые React компоненты
+│   ├── pages/            # Страницы приложения
+│   ├── App.tsx           # Главный компонент приложения
+│   └── main.tsx          # Точка входа приложения
+├── public/               # Статические файлы
+├── dist/                 # Собранный проект (создается после build)
+├── package.json          # Зависимости проекта и скрипты
+├── tsconfig.json         # Конфигурация TypeScript
+├── vite.config.ts        # Конфигурация Vite
+├── eslint.config.js      # Конфигурация ESLint
+└── README.md             # Этот файл
+```
+
+---
+
+## 💡 Рекомендации для разработки
+
+- **Компоненты** - Используйте функциональные компоненты с хуками
+- **Типизация** - Всегда указывайте типы для props и возвращаемых значений
+- **Стили** - Используйте Tailwind CSS классы вместо обычного CSS
+- **Роутинг** - Конфигурируйте маршруты в компоненте App.tsx
+
+---
+
+## 📝 Лицензия
+
+Этот проект открыт для использования и модификации.
+
+---
+
+## 👤 Автор
+
+**Рамазан Юсупов**
+
+- GitHub: [@Ramazan-Yusupov](https://github.com/Ramazan-Yusupov)
+- Веб-сайт: [https://react-my-web-site.vercel.app](https://react-my-web-site.vercel.app)
