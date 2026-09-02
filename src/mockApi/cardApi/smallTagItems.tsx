@@ -14,7 +14,7 @@ export const smallTagItems: SmallTagProps[] = [
     id: 2,
     href: "#",
     icon: <FaMapMarkerAlt />,
-    title: "Каякент",
+    title: "Дагестан",
   },
   {
     id: 3,

@@ -1,17 +1,16 @@
 import type { ProjectItem } from "@/types";
-import { BiMobile } from "react-icons/bi";
-import { BsFiletypeScss } from "react-icons/bs";
-import { CgComponents } from "react-icons/cg";
+import { InfinityIcon, LoaderIcon } from "lucide-react";
+import { BiCard, BiMobile } from "react-icons/bi";
+import { BsTools } from "react-icons/bs";
+import { CgBoard, CgComponents } from "react-icons/cg";
 import { DiReact } from "react-icons/di";
-import { GrOptimize } from "react-icons/gr";
-import { MdDashboard, MdEmail, MdNotifications } from "react-icons/md";
+import { GrLocal, GrOptimize } from "react-icons/gr";
+import { MdEmail } from "react-icons/md";
 import {
   SiTypescript,
   SiTailwindcss,
   SiVercel,
-  SiFirebase,
   SiJavascript,
-  SiI18Next,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -118,12 +117,12 @@ export const projectItems: ProjectItem[] = [
   },
   {
     id: "3",
-    title: "Unco-Scanner",
-    typeProject: "Коммерческий сайт",
+    title: "Planora-Board",
+    typeProject: "Пет-проект",
     description:
-      "Это многофункциональная веб-платформа нового поколения, объединяющая в себе возможности личного кабинета, e-commerce магазина и образовательного хаба",
-    imageUrl: "/uncoscanner.png",
-    link: "https://unco-demo.vercel.app/",
+      "Planora Board — веб-приложение типа канбан/доска задач для личного или командного планирования. Пользователи создают доски, списки и карточки; прикрепляют файлы, ставят метки и чек-листы; используют шаблоны и локальные рабочие пространства для сохранения данных. Для тех, кто не понимает, что делает сайт (простыми словами)",
+    imageUrl: "/planora.png",
+    link: "https://planora-board.vercel.app/",
     projectDetails: {
       tags: [
         {
@@ -143,64 +142,6 @@ export const projectItems: ProjectItem[] = [
           href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         },
         {
-          icon: <BsFiletypeScss />,
-          text: "SCSS Modules",
-          href: "https://sass-lang.com/documentation/modules",
-        },
-        { icon: <SiVercel />, text: "Vercel", href: "https://vercel.com/" },
-        {
-          icon: <SiI18Next />,
-          text: "i18next",
-          href: "https://www.i18next.com/",
-        },
-        {
-          icon: <SiFirebase />,
-          text: "Firebase",
-          href: "https://firebase.google.com/",
-        },
-      ],
-      features: [
-        {
-          text: "Единый центр управления пользователем (Unified User Dashboard)",
-          icon: <MdDashboard size={20} />,
-        },
-        {
-          text: "Глубокая локализация (Global i18n)",
-          icon: <SiI18Next size={20} />,
-        },
-        {
-          text: "Персонализированные уведомления и настройки",
-          icon: <MdNotifications size={20} />,
-        },
-      ],
-      github: "",
-      difficulty: "Junior",
-      duration: "8 месяцев",
-      status: "В процессе",
-    },
-  },
-  {
-    id: "4",
-    title: "31SaaS",
-    typeProject: "Пет-проект",
-    description:
-      "Это высококонверсионная платформа для продажи премиального Next.js шаблона, предназначенного для быстрой разработки SaaS-продуктов.",
-    imageUrl: "/31SaaS.png",
-    link: "https://react-31-saas.vercel.app/",
-    projectDetails: {
-      tags: [
-        { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
-        {
-          icon: <SiTypescript />,
-          text: "TypeScript",
-          href: "https://www.typescriptlang.org/",
-        },
-        {
-          icon: <SiJavascript />,
-          text: "JavaScript",
-          href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-        },
-        {
           icon: <SiTailwindcss />,
           text: "Tailwind CSS",
           href: "https://tailwindcss.com/",
@@ -209,28 +150,40 @@ export const projectItems: ProjectItem[] = [
       ],
       features: [
         {
-          text: "Адаптивный дизайн с поддержкой мобильных устройств (Mobile First)",
-          icon: <BiMobile size={20} />,
-        },
-        {
           text: "Оптимизированная производительность (Performance First)",
           icon: <GrOptimize size={20} />,
         },
+        {
+          text: "Создание досок/колонок/карточек",
+          icon: <CgBoard size={20} />,
+        },
+        {
+          text: "Карточки с заголовком, описанием, метками, чек-листами и файлами",
+          icon: <BiCard size={20} />,
+        },
+        {
+          text: "Хранение: локально + Folder Workspace (File System Access API), экспорт/импорт JSON",
+          icon: <GrLocal size={20} />,
+        },
+        {
+          text: "Модули: шаблоны досок, lazy loading",
+          icon: <LoaderIcon size={20} />,
+        },
       ],
-      github: "https://github.com/Ramazan-Yusupov/react-31Saas",
+      github: "https://github.com/Ramazan-Yusupov/planora-board",
       difficulty: "Пет Проект",
-      duration: "2 дня",
+      duration: "2 месяца",
       status: "Завершено",
     },
   },
   {
-    id: "5",
-    title: "JotForm",
+    id: "4",
+    title: "DrawTool",
     typeProject: "Пет-проект",
     description:
-      "Создавайте формы Jotform непосредственно в Claude, используя простые подсказки. Эта интеграция связывает ваши формы с Claude, позволяя создавать, редактировать и управлять ими в режиме диалога. Благодаря поддержке Jotform MCP вы также можете использовать более наглядный интерфейс, сохраняя при этом полный контроль над своими формами и отправками.",
-    imageUrl: "/Jotform.png",
-    link: "https://react-jotform.vercel.app/",
+      "DrawTool — интерактивная бесконечная доска для схем, заметок, диаграмм и свободного рисования. Проект самостоятельно реализует привычные сценарии редакторов наподобие Excalidraw и Figma: создание фигур, редактирование текста, перемещение, поворот, выравнивание, работа со слоями и сохранение сцены.",
+    imageUrl: "/drawtool.png",
+    link: "https://draw-tool-ten.vercel.app/",
     projectDetails: {
       tags: [
         { icon: <DiReact />, text: "React.js", href: "https://react.dev/" },
@@ -253,17 +206,21 @@ export const projectItems: ProjectItem[] = [
       ],
       features: [
         {
-          text: "Адаптивный дизайн с поддержкой мобильных устройств (Mobile First)",
-          icon: <BiMobile size={20} />,
-        },
-        {
           text: "Оптимизированная производительность (Performance First)",
           icon: <GrOptimize size={20} />,
         },
+        {
+          text: "Бесконечный холст, пан/зум, сетка, привязка к сетке",
+          icon: <InfinityIcon size={20} />,
+        },
+        {
+          text: "Инструменты: фигуры, стрелки, текст, free-draw, ластик, слои, undo/redo",
+          icon: <BsTools size={20} />,
+        },
       ],
-      github: "https://github.com/Ramazan-Yusupov/react-jotform",
+      github: "https://github.com/Ramazan-Yusupov/DrawTool",
       difficulty: "Пет Проект",
-      duration: "2 дня",
+      duration: "2 месяца",
       status: "Завершено",
     },
   },
