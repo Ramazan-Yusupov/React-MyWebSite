@@ -5,7 +5,7 @@ import { GoProjectRoadmap } from "react-icons/go";
 export function CardStatContainer() {
   return (
     <div className="column-gap-5">
-      <CardStatistic text="Проекта" num={5} icon={<GoProjectRoadmap />} />
+      <CardStatistic text="Проекта" num={4} icon={<GoProjectRoadmap />} />
       <CardStatistic text="Года опыта" num={3} icon={<FaFlag />} />
     </div>
   );

@@ -1,9 +1,9 @@
 export const PROFILE = {
   name: "Рамазан Юсупов",
-  role: "Frontend Developer",
+  role: "FullStack Developer",
   status: "Ищу работу",
   avatarSrc: "/frontend.jpg",
-  resumeHref: "/Frontend(React).pdf",
+  resumeHref: "/FullStack(React-Node).pdf",
   resumeLabel: "Резюме",
-  resumeDownloadName: "Frontend(React).pdf",
+  resumeDownloadName: "FullStack(React-Node).pdf",
 } as const;

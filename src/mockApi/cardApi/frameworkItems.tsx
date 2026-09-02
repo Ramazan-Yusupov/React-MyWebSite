@@ -10,6 +10,9 @@ import { BsFiletypeScss } from "react-icons/bs";
 import { IoLogoCss3 } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa6";
 import type { FrameProps } from "@/types";
+import { DiNodejs } from "react-icons/di";
+import { SiExpress, SiReactquery } from "react-icons/si";
+import { GitBranch } from "lucide-react";
 
 export const frameworkItems: FrameProps[] = [
   {
@@ -65,5 +68,29 @@ export const frameworkItems: FrameProps[] = [
     icon: <FaHtml5 size={24} />,
     title: "HTML",
     href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    id: 10,
+    icon: <DiNodejs size={24} />,
+    title: "Node.js",
+    href: "https://nodejs.org/en",
+  },
+  {
+    id: 11,
+    icon: <SiExpress size={24} />,
+    title: "Express.js",
+    href: "https://expressjs.com/",
+  },
+  {
+    id: 12,
+    icon: <SiReactquery size={24} />,
+    title: "React Query",
+    href: "https://react-query.tanstack.com/",
+  },
+  {
+    id: 13,
+    icon: <GitBranch size={24} />,
+    title: "Git",
+    href: "https://git-scm.com/",
   },
 ];
