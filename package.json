@@ -22,6 +22,8 @@
     ]
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.61.10",
+    "@supabase/supabase-js": "^2.117.3",
     "@tailwindcss/vite": "^4.3.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.576.0",
